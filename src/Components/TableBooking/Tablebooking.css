@@ -1,0 +1,381 @@
+:root {
+  --bg-color: #272727;
+  --second-bg-color: #ef1d276b;
+  --main-color: #ef1d26;
+  --disable: #00000077;
+  --white: #ffffff;
+  --black: #000000;
+  --disable-white: #ffffff7c;
+}
+.tablebooking-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+.tablebooking-navbar img {
+  width: 10rem;
+}
+.tablebooking-btnsection {
+  display: flex;
+  gap: 1rem;
+}
+
+.tablebooking-btnsection button {
+  color: var(--disable);
+  background-color: var(--white);
+  border-radius: 2rem;
+  border: 0.1rem solid var(--disable);
+  padding: 0.3rem 2rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.tablebooking-btnsection button:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.tablebooking-header {
+  display: flex;
+  gap: 0.5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+.header-element {
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid var(--main-color);
+  color: var(--main-color);
+  border-radius: 0.3rem;
+  padding: 0.5rem 3rem;
+}
+
+.header-element h2 {
+  font-weight: 500;
+}
+
+.header-element-icon {
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid var(--main-color);
+  color: var(--main-color);
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.4rem;
+}
+
+.header-element-icon i {
+  color: var(--main-color);
+}
+
+.dineout-card-container {
+  background: url(../../../public/Images/tablebooking-bg.jpg);
+  object-fit: cover;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.dineout-card {
+  background: var(--white);
+  width: 45%;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.dineout-card i {
+  color: #3e913e;
+}
+
+.about-card {
+  font-weight: 500;
+  font-size: large;
+}
+.location {
+  font-weight: 300;
+}
+
+.dineout-card h3 {
+  color: #3e913e;
+  margin-top: 2.5rem;
+}
+
+.link-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.call-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--main-color);
+}
+
+.call-section i {
+  color: var(--main-color);
+}
+
+.direction-section i {
+  color: var(--main-color);
+}
+
+.direction-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--main-color);
+}
+
+.dineout-offer-card {
+  background-color: var(--white);
+  border: 0.1rem solid var(--disable);
+  width: 45%;
+  border-radius: 1rem;
+}
+
+.dineout-ofr-amount {
+  padding: 1rem;
+}
+
+.dineout-ofr-amount p {
+  color: var(--disable);
+  font-weight: 500;
+}
+
+.dineout-ofr-category p {
+  color: var(--disable);
+  font-size: small;
+}
+
+.dineout-ofr-category {
+  margin-top: 2rem;
+  background-color: #00000007;
+  padding: 1rem;
+  border-top: 0.1rem dashed var(--disable);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.offer-card-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.dineout-offer-section {
+  margin-top: 1rem;
+}
+
+.dineout-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.dineout-photo-section img {
+  width: 23rem;
+  border-radius: 1rem;
+}
+.additional-ofr-section {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.add-offer-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: 0.1rem solid var(--disable);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 45%;
+}
+.additional-img-section img {
+  width: 3.5rem;
+}
+
+.additional-ofr-details h3 {
+  color: #3e913e;
+}
+.additional-ofr-details p {
+  font-size: small;
+  color: var(--disable);
+}
+
+.photo-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-btn-section {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.photo-btn-section button {
+  background-color: white;
+  border: 1px solid #00000031;
+  border-radius: 10rem;
+  padding: 0.5rem 1.5rem;
+  color: #272727d2;
+  font-weight: bold;
+  font-family: "Nunito", serif;
+}
+
+.ambience-photo img {
+  object-fit: cover;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+.ambience-photocontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.vegmenu-photo img {
+  object-fit: cover;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+.vegmenu-photocontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.food-photo img {
+  object-fit: cover;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+.food-photocontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.Nonvegmenu-photo img {
+  object-fit: cover;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+.Nonvegmenu-photocontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.photo-cover img {
+  width: 20rem;
+  border-radius: 1rem;
+}
+.menu-cover img {
+  width: 20rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 512px) {
+  .menu-cover {
+    display: none;
+  }
+
+  .vegmenu-photo img {
+    width: 100%;
+  }
+
+  .Nonvegmenu-photo img {
+    width: 100%;
+  }
+
+  .ambience-photo img {
+    width: 100%;
+  }
+  .food-photo img {
+    width: 100%;
+  }
+
+  .photo-cover {
+    display: none;
+  }
+
+  .add-offer-card {
+    width: 100%;
+  }
+
+  .additional-ofr-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .dineout-offer-card {
+    width: 100%;
+  }
+
+  .offer-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dineout-photo-section img {
+    display: none;
+  }
+
+  .dineout-card {
+    background: var(--white);
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .tablebooking-navbar img {
+    width: 6rem;
+  }
+
+  .tablebooking-btnsection button {
+    color: var(--disable);
+    background-color: var(--white);
+    border-radius: 2rem;
+    border: 0.1rem solid var(--disable);
+    padding: 0.1rem 1rem;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+
+  .tablebooking-btnsection {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  .tablebooking-navbar {
+    display: block;
+    margin-top: 1rem;
+  }
+}

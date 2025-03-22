@@ -1,0 +1,233 @@
+:root {
+  --bg-color: #272727;
+  --second-bg-color: #ef1d276b;
+  --main-color: #ef1d26;
+  --disable: #0000009a;
+  --white: #ffffff;
+  --black: #000000;
+  --disable-white: #ffffff7c;
+}
+.ratting-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+.ratting-nav img {
+  width: 10rem;
+}
+.back-btn {
+  border: 0.1rem solid var(--main-color);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+}
+.back-btn i {
+  font-size: x-large;
+}
+
+.ratting-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+.ratting-section img {
+  width: 20rem;
+  border-radius: 1rem;
+}
+
+.rest-ratting-container {
+  background: #459cff23;
+  /* border: 0.1rem solid var(--disable); */
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+.rest-ratting-container h2 {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.rest-ratting-container .star i {
+  color: var(--disable);
+  font-size: xx-large;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.rest-ratting-container .star {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -1rem;
+}
+
+.rest-ratting-container textarea {
+  width: 30rem;
+  height: 15rem;
+  padding: 1rem;
+  border: 0.1rem solid #67b6ff3f;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.rest-ratting-container button {
+  width: 100%;
+  background-color: #67b6ff;
+  padding: 0.5rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.review-section {
+  width: 100%;
+  background-color: #459cff23;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.star-review {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.star-review .ratting-viewer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.star-review .ratting-viewer .ratting-icon {
+  display: flex;
+  color: #ffa500;
+  font-size: small;
+}
+.ratting-slider-container {
+  border: 0.1rem solid #ffa500;
+  border-radius: 1rem;
+  width: 70%;
+}
+
+.ratting-slider {
+  background-color: #ffa500;
+  padding: 0.1rem;
+  width: 25%;
+}
+
+.ratting-number p {
+  font-size: x-small;
+}
+
+.comment-review {
+  /* background-color: var(--white); */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.comment-review .cmt-card {
+  background-color: white;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.comment-review .cmt-card .user-id {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comment-review .cmt-card .user-id i {
+  font-size: 1.5rem;
+  color: #adadad;
+}
+
+.comment-review .cmt-card .user-id p {
+  font-size: x-small;
+  font-weight: 600;
+}
+
+.comment-review .cmt-card .user-cmt {
+  padding-left: 1.5rem;
+}
+
+.comment-review .cmt-card .user-cmt p {
+  font-size: 0.7rem;
+}
+
+.comment-review .cmt-card .user-cmt .like-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: right;
+}
+
+.cmt-error {
+  color: var(--main-color);
+}
+
+@media screen and (max-width: 512px) {
+  .ratting-section img {
+    display: none;
+  }
+
+  .ratting-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+  }
+
+  .rest-ratting-container {
+    /* border: 0.1rem solid var(--disable); */
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .rest-ratting-container textarea {
+    width: 100%;
+    height: 7rem;
+    padding: 1rem;
+    border: 0.1rem solid #67b6ff3f;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .star-review .ratting-viewer .ratting-icon {
+    display: flex;
+    color: #ffa500;
+    font-size: small;
+  }
+
+  .ratting-slider-container {
+    border: 0.1rem solid #ffa500;
+    border-radius: 1rem;
+    width: 45%;
+  }
+}

@@ -1,0 +1,165 @@
+:root {
+  --bg-color: #272727;
+  --second-bg-color: #ef1d276b;
+  --main-color: #ef1d26;
+  --disable: #00000077;
+  --white: #ffffff;
+  --black: #000000;
+  --disable-white: #ffffff7c;
+}
+
+.signupnav-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+.signupnav-section img {
+  width: 10rem;
+}
+.signupnav-section .signupback-btn {
+  border: 0.1rem solid var(--main-color);
+  border-radius: 0.3rem;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.signupnav-section .signupback-btn i {
+  font-size: x-large;
+}
+
+.genie-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  font-family: "Nunito", serif;
+  display: flex;
+  justify-content: space-around;
+}
+
+.genie-cover img {
+  width: 28rem;
+}
+
+.genie-cover {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.genie-offer img {
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.genie-offer h3 {
+  color: #43a743;
+}
+
+.genie-offer h4 {
+  color: #838383;
+}
+
+.genie-offer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #627efc0e;
+  background-color: #627efc25;
+  border-radius: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-top: 1rem;
+}
+.genie-detailcontainer {
+  display: block;
+}
+
+.genie-detail {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.genie-detailcontainer button {
+  /* border: 1px solid #c2c2c2 ; */
+  border-radius: 1rem;
+  padding: 1.3rem 1.3rem;
+  width: 100%;
+  margin-top: 1rem;
+  text-align: left;
+  font-weight: bold;
+  font-size: medium;
+  font-family: "Nunito", serif;
+}
+
+.pick-btn {
+  color: var(--main-color);
+  background-color: var(--white);
+  border: 1px solid var(--main-color);
+}
+
+.drop-btn {
+  color: #5cca5c;
+  background-color: var(--white);
+  border: 1px solid #5cca5c;
+}
+
+.genie-detailcontainer button i {
+  font-size: x-large;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+.rule-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  color: #616161;
+}
+
+.rule-container p {
+  font-size: small;
+}
+
+.rulebox {
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #eeeeeedc;
+}
+
+@media screen and (max-width: 512px) {
+  .genie-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    font-family: "Nunito", serif;
+    display: block;
+    justify-content: space-around;
+  }
+
+  .genie-cover img {
+    width: 20rem;
+  }
+
+  .genie-offer h4 {
+    color: #838383;
+    font-size: x-small;
+  }
+
+  .genie-offer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #616161;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}

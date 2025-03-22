@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  /* font-size: 65%; */
+}
+
+:root {
+  --bg-color: #272727;
+  --second-bg-color: #ef1d276b;
+  --main-color: #ef1d26;
+  --disable: #00000077;
+  --white: #ffffff;
+  --black: #000000;
+  --disable-white: #ffffff7c;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-color);
+  padding: 0.7rem 2rem;
+}
+.navbar .menu i {
+  display: none;
+}
+.nav-btn {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.nav-btn a {
+  color: var(--white);
+}
+
+.logo img {
+  width: 10rem;
+}
+
+.btn-getapp {
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--bg-color);
+  padding: 0.7rem 1.4rem;
+  transition: 0.5s;
+}
+
+.btn-getapp:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
+.btn-signup {
+  color: var(--white);
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  padding: 0.7rem 1.4rem;
+  transition: 0.5s;
+}
+
+.btn-signup:hover {
+  background: var(--white);
+  color: var(--main-color);
+}
+
+.home-section {
+  width: 100%;
+  background: url(biriyani.jpg);
+  background-color: var(--bg-color);
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+
+.home-detail {
+  padding: 3rem 2rem;
+}
+
+.home-detail p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 4.5rem;
+  color: var(--white);
+}
+
+.home-detail form {
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.home-detail input {
+  width: 30%;
+  padding: 0.8rem 0.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.home-detail button {
+  padding: 0.7rem 0.5rem;
+  display: flex;
+  font-size: x-large;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: var(--white);
+  background: var(--main-color);
+}
+
+.category-section {
+  background: var(--bg-color);
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.option-card {
+  background: linear-gradient(135deg, #ffffff1a, #ffffff00);
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff2e;
+  box-shadow: 0 8px 32px 0 #0000005e;
+  border-radius: 15px;
+  width: 100%;
+  height: 17rem;
+  padding: 0.5rem;
+}
+
+.option-card:hover i {
+  font-size: 2.5rem;
+  border-radius: 50%;
+}
+
+.card-about h2 {
+  color: var(--main-color);
+}
+
+.card-about h4 {
+  color: var(--disable-white);
+}
+
+.card-offer p {
+  background: linear-gradient(90deg, #00000000, var(--main-color));
+  color: var(--white);
+  font-weight: 600;
+  width: 70%;
+  margin-top: 1rem;
+  padding: 0.2rem;
+  border-radius: 1rem;
+}
+
+.card-image img {
+  width: 10rem;
+}
+.card-image {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.card-image i {
+  font-size: xx-large;
+  background: #3ab15d;
+  border-radius: 1rem;
+  color: var(--bg-color);
+  transition: 0.5s;
+}
+
+.table-header h1 {
+  color: var(--black);
+  text-align: center;
+  font-family: "Nunito", serif;
+  padding: 1rem;
+}
+
+.table-header h1 span {
+  font-family: "Nunito", serif;
+  background: var(--main-color);
+  padding: 0.2rem 1rem;
+  border-radius: 7px;
+  color: var(--white);
+}
+
+.slider-card {
+  width: 23%;
+  margin-top: 1rem;
+}
+.slider-img {
+  position: relative;
+  color: var(--white);
+}
+
+.slider-detail {
+  width: 18.6rem;
+}
+
+.slider-img img {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.slider-img h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+}
+
+.restaurant-discreption {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.3rem;
+}
+
+.restaurant-discreption p {
+  color: #000000c0;
+  font-size: small;
+}
+
+.booking-tag {
+  display: flex;
+  align-items: center;
+  background: #0000004f;
+  font-size: smaller;
+  width: 40%;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  color: #000000b9;
+  margin-top: 0.5rem;
+}
+
+.offer-btn {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  gap: 0.1rem;
+}
+
+.offer-section {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  background: #2f8148;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.offer-section p {
+  font-size: small;
+}
+
+.bank-offer {
+  background: #2f814870;
+  color: #2f8148;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  font-size: small;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+
+.city-section {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.city-section h2 {
+  color: var(--main-color);
+}
+
+.city-card {
+  border: 0.1rem solid var(--disable);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: small;
+  width: 20%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.city-card:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+.city-header h2 {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  color: var(--main-color);
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.qr-section {
+  background-color: var(--bg-color);
+  margin-top: 3rem;
+}
+.qr-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qr-detail {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.qr-detail h1 {
+  color: var(--white);
+  font-weight: 600;
+}
+.qr-detail p {
+  color: var(--disable-white);
+  /* font-weight: 600; */
+}
+
+.qr-detail img {
+  width: 10rem;
+}
+
+.qr-code img {
+  width: 27rem;
+}
+
+@media screen and (max-width: 512px) {
+  .qr-detail {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1rem;
+  }
+
+  .qr-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .qr-detail h1 {
+    color: var(--white);
+    /* font-weight: 600; */
+    font-size: xx-small;
+  }
+  .qr-detail p {
+    color: var(--disable-white);
+    font-size: 0.3rem;
+    /* font-weight: 600; */
+  }
+
+  .qr-detail img {
+    width: 5rem;
+  }
+
+  .qr-code img {
+    width: 10rem;
+  }
+  .city-card {
+    width: 33%;
+    padding: 0.5rem;
+    font-size: 10px;
+    /* text-align: center; */
+  }
+
+  .city-header h2 {
+    text-align: center;
+    font-size: medium;
+    margin-top: 2rem;
+  }
+
+  .city-section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .category-section {
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* gap: 2rem; */
+  }
+
+  .option-card {
+    background: linear-gradient(135deg, #ffffff1a, #ffffff00);
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff2e;
+    box-shadow: 0 8px 32px 0 #0000005e;
+    border-radius: 15px;
+    width: 80%;
+    height: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    /* padding: .5rem; */
+  }
+
+  .home-section {
+    background: url(../../../public/Images/homecover.jpg);
+  }
+
+  .home-detail {
+    padding: 2rem 1rem;
+  }
+
+  .home-detail p {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 2rem;
+  }
+
+  .home-detail input {
+    width: 40%;
+    padding: 0.3rem 0.3rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .home-detail input::placeholder {
+    font-size: xx-small;
+  }
+
+  .home-detail button {
+    padding: 0.36rem 0.5rem;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: var(--white);
+    background: var(--main-color);
+  }
+
+  .homeslider-card {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .homesliderdata-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000000;
+  }
+}

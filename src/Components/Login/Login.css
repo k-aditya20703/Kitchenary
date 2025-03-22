@@ -1,0 +1,124 @@
+:root {
+  --bg-color: #272727;
+  --second-bg-color: #ef1d276b;
+  --main-color: #ef1d26;
+  --disable: #00000077;
+  --white: #ffffff;
+  --black: #000000;
+  --disable-white: #ffffff7c;
+}
+
+.user-login-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-cover-container img {
+  width: 30rem;
+}
+
+.user-login-section .login-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 40%;
+}
+
+.login-container form .logininput-container label {
+  color: var(--black);
+  font-size: small;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.login-container form .logininput-container input {
+  border: 0.1rem solid var(--disable);
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.login-container form .input-button button {
+  color: var(--white);
+  background-color: var(--main-color);
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
+
+.login-container form .logininput-container .email-feild {
+  display: flex;
+  align-items: center;
+}
+.login-container form .logininput-container .email-feild .email-icon {
+  color: var(--disable);
+  border: 0.1rem solid var(--disable);
+  /* background: var(--main-color); */
+  display: flex;
+  align-items: center;
+  padding: 0.63rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.login-container form .logininput-container .password-feild {
+  display: flex;
+  align-items: center;
+}
+.login-container form .logininput-container .password-feild .password-icon {
+  color: var(--white);
+  border: 0.1rem solid var(--main-color);
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  padding: 0.63rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.login-container form p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: small;
+}
+
+.login-container form p span {
+  color: var(--main-color);
+}
+
+.login-container form .signup-icon-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  gap: 1rem;
+}
+
+.login-container form .address-error {
+  text-align: left;
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 512px) {
+  .login-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login-section .login-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 90%;
+  }
+
+  .login-cover-container img {
+    width: 23rem;
+  }
+}

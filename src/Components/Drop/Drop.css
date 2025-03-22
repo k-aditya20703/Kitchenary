@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #272727;
+  --second-bg-color: #ef1d276b;
+  --main-color: #ef1d26;
+  --disable: #00000077;
+  --white: #ffffff;
+  --black: #000000;
+  --disable-white: #ffffff7c;
+}
+
+.drop-section {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+.pickupimg-container img {
+  width: 31rem;
+}
+.drop-form {
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 1rem;
+  background-color: #91df6d4b;
+  padding: 1rem;
+  width: 100%;
+}
+.drop-form h3 {
+  /* color: var(--main-color); */
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.pin-section {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.drop-form input {
+  width: 100%;
+  border: 0.1rem solid #91df6d9a;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.drop-form button {
+  width: 100%;
+  border: 0.1rem solid #5cca5c;
+  color: var(--white);
+  background-color: #5cca5c;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.drop-division {
+  position: relative;
+  width: 100%;
+}
+.drop {
+  position: absolute;
+  width: 100%;
+}
+
+.payment {
+  position: absolute;
+  width: 100%;
+}
+.drop-form form p {
+  margin-left: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+@media screen and (max-width: 512px) {
+  .drop-section {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+  }
+
+  .pickupimg-container img {
+    width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

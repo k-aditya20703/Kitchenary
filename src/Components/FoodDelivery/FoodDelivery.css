@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;  
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+
+}
+:root{
+    --bg-color: #272727;
+    --second-bg-color: #ef1d276b;
+    --main-color: #ef1d26;
+    --disable: #0000009a;
+    --white: #ffffff;
+    --black: #000000;
+    --disable-white: #ffffff7c;
+
+}
+.logo-container img{
+    width: 10rem;
+}
+.foodnavbar-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: .3rem;
+}
+.foodbtn-section{
+    display: flex;
+    gap: 1rem;
+    /* background-color: #000000; */
+    width: 76%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.fooddelivery-header{
+    width: 76%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--main-color);
+}
+
+.foodbtn-section button{
+    padding: .4rem 1rem ;
+    color: var(--disable);
+    background: var(--white);
+    border: 1px solid var(--disable);
+    border-radius: 2rem;
+    transition: .5s;
+}
+
+.foodbtn-section button:hover{
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.foodcard-section{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foodcard-section h2{
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-weight: 500;
+    margin-left: 5%;
+}
+.food-card{
+    width: 21%; 
+}
+.foodimg-section img{
+    width: 100%;
+    height: 8rem;
+    border-radius: .5rem;
+}
+.fooddetail-section p{
+    color: var(--disable);
+    font-weight: 500;
+}
+.fooddetail-section p span{
+    color: var(--black);
+    font-weight: 500;
+}
+
+.fooddetail-section p i{
+    color: rgb(58, 141, 58);
+}
+.foodcard-container{
+    display: flex;
+    gap: 1rem;
+    width: 90%;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 512px){
+
+    .fooddelivery-header{
+        width: 90%;
+        font-size: .6rem;
+        margin-bottom: .5rem;
+    }
+    .foodbtn-section button{
+        padding: .1rem .2rem;
+        font-size: .5rem;
+        font-weight: 600;
+        color: var(--disable);
+        background: var(--white);
+        border: 1px solid var(--disable);
+        border-radius: 1rem;
+        transition: .5s;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .foodbtn-section{
+        display: flex;
+        gap: 1px;
+        width: 90%;
+        /* background-color: #000000; */
+    }
+
+    
+    .foodcard-container{
+        display: flex;
+        gap: 1rem;
+        width: 90%;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+    .food-card{
+        width: 23%; 
+    }
+
+    .foodimg-section img{
+        width: 100%;
+        height: 3rem;
+        border-radius: .5rem;
+    }
+
+    .fooddetail-section h3{
+        font-size: xx-small;
+    }
+    .fooddetail-section p{
+        font-size: .5rem;
+    }
+    .fooddetail-section p i{
+        font-size: .4rem;
+    }
+    .fooddetail-section span{
+        font-size: .4rem;
+    }
+
+}

@@ -1,0 +1,205 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+.partnerlogin-section {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Nunito", serif;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
+.partnerformsection-container {
+  background: url(../../../public/Images/partnerform-bg.jpg);
+  object-fit: cover;
+  background-position-x: right;
+  width: 100%;
+  padding: 1rem;
+}
+
+.partnerformsection-container .partnerform-section {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px #000000b0;
+  background-color: #00000013;
+  padding: 1rem;
+  width: 80%;
+}
+
+.partnerform-section h2 {
+  color: #ef1d26;
+}
+
+.partnerform-section .partner-form-division {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+.partnerform-section form .login-section {
+  width: 40%;
+}
+
+.partnerform-section form input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #ffffff73;
+  background: transparent;
+  color: #ffffff;
+}
+
+.partnerform-section form .login-section input::placeholder {
+  color: #ef1d26;
+}
+
+.address-error {
+  color: #ef1d26;
+  font-size: small;
+  margin-left: 1rem;
+}
+
+.partnerform-section button {
+  width: 50%;
+  padding: 0.9rem;
+  margin-top: 1rem;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  color: white;
+  background-color: #ef1d26;
+  border: 0.1rem solid #ef1d26;
+  border-radius: 0.5rem;
+}
+
+.partner-login-option {
+  text-align: center;
+  font-size: small;
+  margin-top: 0.5rem;
+  color: #ffffff73;
+}
+
+.icon-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* margin-left: 1.3rem; */
+}
+
+.icon-container {
+  border: 1px solid #ef1d26;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color: #ffffff;
+  background-color: #ef1d26;
+  transition: 0.5s;
+}
+
+.icon-container i {
+  color: #ffffff;
+  font-size: large;
+  transition: 0.5s;
+}
+
+.icon-container:hover {
+  background-color: #ef1d26;
+  color: white;
+}
+
+.icon-container:hover i {
+  color: white;
+}
+
+.partnerLogin-nav {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.partnerLogin-nav img {
+  width: 10rem;
+}
+
+.partnerLogin-nav i {
+  font-size: 1.5rem;
+  color: #ef1d26;
+  border: 0.1rem solid #ef1d26;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.partnerLogin-nav i:hover {
+  background-color: #ef1d26;
+  color: white;
+}
+
+.partnerform-section form label {
+  font-size: small;
+  margin-left: 1rem;
+  color: #ef1d26;
+  font-weight: 700;
+  margin-top: -3rem;
+}
+
+.partnerform-section form button:focus {
+  background-color: #d61b25;
+}
+.partnerform-section {
+  width: 50%;
+  padding: 2rem;
+}
+
+.partnerform-section form button {
+  width: 90%;
+}
+
+.address-form-section {
+  padding: 1rem;
+  width: 100%;
+  border: 0.1rem solid #ffffff73;
+  border-radius: 1rem;
+}
+.address-form-section .address-form-info {
+  width: 100%;
+  /* background-color: #d61b25; */
+}
+.address-form-section .address-form-info input {
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 512px) {
+  .partnerformsection-container .partnerform-section {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px #000000b0;
+    background-color: #00000013;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .partnerform-section .partner-form-division {
+    display: block;
+    /* justify-content: space-around; */
+    margin-top: 1rem;
+  }
+  .partnerform-section form .login-section {
+    width: 100%;
+  }
+}
