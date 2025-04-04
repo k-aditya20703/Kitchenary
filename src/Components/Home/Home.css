@@ -75,7 +75,7 @@
 
 .home-section {
   width: 100%;
-  background: url(biriyani.jpg);
+  background: url(../../../public/Images/background.jpg);
   background-color: var(--bg-color);
   background-position-x: right;
   background-repeat: no-repeat;

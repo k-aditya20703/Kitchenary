@@ -45,6 +45,9 @@ const Home = () => {
           <i onClick={handleMenu} class="bx bx-menu"></i>
         </div>
         <div className="nav-btn">
+          <NavLink to="/dashboard">
+            <a href="#">Dashboard</a>
+          </NavLink>
           <a href="#">Corporate</a>
           <NavLink to="/partnerwithus">
             <a href="#">Partner With Us</a>

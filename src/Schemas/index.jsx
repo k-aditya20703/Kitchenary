@@ -15,7 +15,7 @@ export const PartnerSignupSchema = Yup.object({
   state: Yup.string().min(3).max(15).required("Plese enter your state"),
   district: Yup.string().min(3).max(15).required("Plese enter your district"),
   city: Yup.string().min(3).max(15).required("Plese enter your city"),
-  pincode: Yup.number().min(6).max(6).required("Plese enter your pincode"),
+  pincode: Yup.number().required("Plese enter your pincode"),
   landmark: Yup.string().min(3).max(25).required("Plese enter your landmark"),
   building: Yup.string().min(3).max(25).required("Plese enter your building"),
   colony: Yup.string().min(3).max(25).required("Plese enter your colony"),
@@ -39,7 +39,7 @@ export const LoginSchema = Yup.object({
 export const PickupSchema = Yup.object({
   name: Yup.string().min(2).max(25).required("Plese enter your name"),
   number: Yup.number().required("Plese enter your number"),
-  pincode: Yup.number().min(6).max(6).required("Plese enter your pincode"),
+  pincode: Yup.number().required("Plese enter your pincode"),
   landmark: Yup.string().min(3).max(25).required("Plese enter your landmark"),
   address: Yup.string().min(3).max(35).required("Plese enter your address"),
 });
@@ -47,11 +47,18 @@ export const PickupSchema = Yup.object({
 export const DropSchema = Yup.object({
   name: Yup.string().min(2).max(25).required("Plese enter your name"),
   number: Yup.number().required("Plese enter your number"),
-  pincode: Yup.number().min(6).max(6).required("Plese enter your pincode"),
+  pincode: Yup.number().required("Plese enter your pincode"),
   landmark: Yup.string().min(3).max(25).required("Plese enter your landmark"),
   address: Yup.string().min(3).max(35).required("Plese enter your address"),
 });
 
 export const CommentSchema = Yup.object({
   comment: Yup.string().min(3).max(250).required("Plese enter your comment"),
+});
+
+export const AddItemSchema = Yup.object({
+  item_name: Yup.string().min(2).max(25).required("Plese enter item name"),
+  prep_time: Yup.number().required("Plese enter preparation time"),
+  item_price: Yup.number().required("Plese enter preparation time"),
+  item_offer: Yup.number().required("Plese enter preparation time"),
 });

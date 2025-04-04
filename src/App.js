@@ -16,6 +16,7 @@ import Pickup from "./Components/Pickup/Pickup";
 import Drop from "./Components/Drop/Drop";
 import Payment from "./Components/Payment/Payment";
 import Login from "./Components/Login/Login";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 function App() {
   const [showRestaurants, setShowRestaurants] = useState(TableBooking);
@@ -42,7 +43,7 @@ function App() {
             />
           }
         />
-        <Route path="partnerwithus" element={<PartnerLogin />} />
+        <Route path="/partnerwithus" element={<PartnerLogin />} />
         <Route path="/additem" element={<AddItem />} />
         <Route path="/ratting" element={<Ratting />} />
         <Route path="/signup" element={<Signup />} />
@@ -51,6 +52,7 @@ function App() {
         <Route path="/drop" element={<Drop />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );
