@@ -102,7 +102,13 @@ const PartnerLogin = () => {
                   {Formik.errors.name && Formik.touched.name ? (
                     <p className="address-error">{Formik.errors.name}</p>
                   ) : null}
-                  <label htmlFor="email">E-mail :</label>
+                  <label htmlFor="restaurant-image">Restaurant Image :</label>
+                  <input
+                    name="restaurant-image"
+                    id="restaurant-image"
+                    type="file"
+                  />
+                  <label htmlFor="email">Business Email :</label>
                   <input
                     value={Formik.values.email}
                     name="email"
@@ -115,7 +121,7 @@ const PartnerLogin = () => {
                   {Formik.errors.email && Formik.touched.email ? (
                     <p className="address-error">{Formik.errors.email}</p>
                   ) : null}
-                  <label htmlFor="number">Number :</label>
+                  <label htmlFor="number">Business Number :</label>
                   <input
                     value={Formik.values.number}
                     name="number"
@@ -160,7 +166,7 @@ const PartnerLogin = () => {
                 </div>
 
                 <div className="address-section">
-                  <label htmlFor="address">Address :</label>
+                  <label htmlFor="address">Restaurant Address :</label>
                   <div className="address-form-section">
                     <div style={{ display: "flex", gap: "1rem" }}>
                       <div className="address-form-info">
@@ -291,22 +297,27 @@ const PartnerLogin = () => {
                       ) : null}
                     </div>
                   </div>
+                  <div className="term-section">
+                    <div
+                      className="address-form-info"
+                      style={{ display: "flex", padding: "0rem" }}
+                    >
+                      <input
+                        style={{ display: "flex", justifyContent: "left" }}
+                        type="checkbox"
+                      />
+                      <label htmlFor="confirm_password">
+                        Accept all terms & conditions
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </div>
+
               <button type="submit" className="proceed-btn">
                 Submit
               </button>
             </form>
-            {/* <p className="partner-login-option">or continue with</p> */}
-
-            {/* <div className="icon-section">
-            <div className="icon-container">
-              <i class="bx bxl-google"></i>
-            </div>
-            <div className="icon-container">
-              <i class="bx bxl-facebook"></i>
-            </div>
-          </div> */}
           </div>
         </div>
       )}

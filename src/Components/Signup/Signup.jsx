@@ -50,24 +50,41 @@ const Signup = () => {
         <div className="signup-container">
           <form onSubmit={Formik.handleSubmit}>
             <h2>Sign up</h2>
-            <div className="input-container">
-              <label>Full Name</label>
-              <div className="input-icon-section">
-                <input
-                  name="name"
-                  value={Formik.values.name}
-                  onChange={Formik.handleChange}
-                  onBlur={Formik.handleBlur}
-                  type="text"
-                ></input>
-                <div className="inputicon-container">
-                  <i class="bx bxs-user"></i>
+            <div>
+              <div className="input-container">
+                <label>Full Name</label>
+                <div className="input-icon-section">
+                  <input
+                    name="name"
+                    value={Formik.values.name}
+                    onChange={Formik.handleChange}
+                    onBlur={Formik.handleBlur}
+                    type="text"
+                  ></input>
+                  <div className="inputicon-container">
+                    <i class="bx bxs-user"></i>
+                  </div>
+                </div>
+              </div>
+              {Formik.errors.name && Formik.touched.name ? (
+                <p className="address-error">{Formik.errors.name}</p>
+              ) : null}
+              <div className="input-container">
+                <label>Profile Photo</label>
+                <div className="input-icon-section">
+                  <input
+                    // name="name"
+                    // value={Formik.values.name}
+                    // onChange={Formik.handleChange}
+                    // onBlur={Formik.handleBlur}
+                    type="file"
+                  ></input>
+                  <div className="inputicon-container">
+                    <i class="bx bxs-user"></i>
+                  </div>
                 </div>
               </div>
             </div>
-            {Formik.errors.name && Formik.touched.name ? (
-              <p className="address-error">{Formik.errors.name}</p>
-            ) : null}
             <div className="input-container">
               <label>E-mail</label>
               <div className="input-icon-section">
@@ -148,6 +165,20 @@ const Signup = () => {
             Formik.touched.confirm_password ? (
               <p className="address-error">{Formik.errors.confirm_password}</p>
             ) : null}
+            <div
+              style={{
+                display: "flex",
+                marginTop: ".5rem",
+                marginLeft: ".5rem",
+                color: "red",
+              }}
+              className="input-container"
+            >
+              <div className="input-icon-section">
+                <input type="checkbox"></input>
+              </div>
+              <label>Agree with all terms & conditions</label>
+            </div>
             <button type="submit">Submit</button>
             <p>
               allready have an account{" "}

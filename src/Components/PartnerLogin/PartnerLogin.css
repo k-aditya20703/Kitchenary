@@ -153,7 +153,7 @@
   margin-left: 1rem;
   color: #ef1d26;
   font-weight: 700;
-  margin-top: -3rem;
+  /* margin-top: -3rem; */
 }
 
 .partnerform-section form button:focus {
@@ -177,10 +177,22 @@
 .address-form-section .address-form-info {
   width: 100%;
   margin-bottom: 0.3rem;
+  display: flex;
+  justify-content: center;
   /* background-color: #d61b25; */
 }
 .address-form-section .address-form-info input {
   margin-top: 0.5rem;
+}
+
+.partnerform-section .partner-terms-conditions {
+  background-color: #d61b25;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 0;
 }
 
 @media screen and (max-width: 512px) {

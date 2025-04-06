@@ -22,16 +22,26 @@ const FoodDelivery = () => {
         console.log(res.data);
         setPartners(res.data);
         setLoader(false);
+        let nameList = [];
         res.data.map((partner, index) => {
           let itemName = "";
-          partner.partnerItems.map((item) => {
+          partner.partnerItems.map((item, key) => {
             console.log(item.itemName);
-            itemName = itemName + item.itemName;
+            if (item.itemName && item.itemName !== undefined) {
+              console.log(partner.partnerItems.length);
+              if (key < partner.partnerItems.length - 1) {
+                itemName = itemName + item.itemName + " | ";
+              } else {
+                itemName = itemName + item.itemName;
+              }
+            }
+
             return itemName;
           });
           console.log(itemName);
-          setTest(itemName);
+          nameList.push(itemName);
         });
+        setTest(nameList);
       });
     } catch (error) {
       console.log(error);
@@ -106,7 +116,7 @@ const FoodDelivery = () => {
                 {/* {foodData.partnerItems.map((itemDetails, index) => ( */}
                 <div>
                   <div className="foodimg-section">
-                    <img src="" alt="my_img"></img>
+                    <img src="./Images/food3.jpeg" alt="my_img"></img>
                   </div>
                   <div className="fooddetail-section">
                     <h3>{foodData.restaurantName}</h3>

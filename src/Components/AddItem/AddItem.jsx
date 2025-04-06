@@ -44,24 +44,24 @@ const AddItem = (props) => {
       <div className="additem-section">
         <div className="additem-form">
           <form onSubmit={Formik.handleSubmit}>
-            <div className="photo-selector">
-              <div className="selector-input">
-                <label>Upload Item Photo</label>
-                <div>
-                  <input
-                    type="file"
-                    name="item_photo"
-                    onChange={(e) => {
-                      Formik.setFieldValue(
-                        "item_photo",
-                        e.currentTarget.files[0]
-                      );
-                    }}
-                  ></input>
-                </div>
+            {/* <div className="photo-selector"> */}
+            <div className="selector-input">
+              <label>Upload Item Photo</label>
+              <div>
+                <input
+                  type="file"
+                  name="item_photo"
+                  onChange={(e) => {
+                    Formik.setFieldValue(
+                      "item_photo",
+                      e.currentTarget.files[0]
+                    );
+                  }}
+                ></input>
               </div>
+            </div>
 
-              <div className="selector-input">
+            {/* <div className="selector-input">
                 <label>Upload Restaurant Photo</label>
                 <div>
                   <input
@@ -75,8 +75,8 @@ const AddItem = (props) => {
                     }}
                   ></input>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             <div className="item-input">
               <label>Item Name</label>
