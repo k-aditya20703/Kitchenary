@@ -116,7 +116,7 @@ const FoodDelivery = () => {
                 {/* {foodData.partnerItems.map((itemDetails, index) => ( */}
                 <div>
                   <div className="foodimg-section">
-                    <img src="./Images/food3.jpeg" alt="my_img"></img>
+                    <img src={foodData.restaurantImgUrl} alt="my_img"></img>
                   </div>
                   <div className="fooddetail-section">
                     <h3>{foodData.restaurantName}</h3>

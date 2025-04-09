@@ -12,7 +12,6 @@ const initialValues = {
   item_price: "",
   item_offer: "",
   item_photo: "",
-  restaurant_photo: "",
 };
 const AddItem = (props) => {
   const Formik = useFormik({
@@ -60,23 +59,6 @@ const AddItem = (props) => {
                 ></input>
               </div>
             </div>
-
-            {/* <div className="selector-input">
-                <label>Upload Restaurant Photo</label>
-                <div>
-                  <input
-                    type="file"
-                    name="restaurant_photo"
-                    onChange={(e) => {
-                      Formik.setFieldValue(
-                        "restaurant_photo",
-                        e.currentTarget.files[0]
-                      );
-                    }}
-                  ></input>
-                </div>
-              </div> */}
-            {/* </div> */}
 
             <div className="item-input">
               <label>Item Name</label>

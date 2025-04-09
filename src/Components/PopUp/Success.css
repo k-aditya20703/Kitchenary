@@ -1,0 +1,72 @@
+:root {
+  --bg-color: #272727;
+  --second-bg-color: #ef1d276b;
+  --main-color: #ef1d26;
+  --disable: #00000077;
+  --white: #ffffff;
+  --black: #000000;
+  --disable-white: #ffffff7c;
+}
+
+.success_section {
+  width: 100%;
+  height: 100vh;
+  background-color: #00000023;
+  backdrop-filter: blur(3px);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success_section .success_container {
+  background-color: var(--white);
+  /* padding: 1rem; */
+  width: 40%;
+  border-radius: 1rem;
+  box-shadow: 3px 2px 10px var(--disable);
+}
+
+.success_section .success_container .success_message {
+  background-color: #4fc05e;
+  color: var(--white);
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.success_section .success_container .success_message .icon_container {
+  background-color: white;
+  width: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+  color: #4fc05e;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.success_section .success_container .success_message p {
+  font-size: small;
+  margin-top: 2rem;
+}
+
+.success_section .success_container .success_action {
+  padding: 1rem;
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.success_section .success_container .success_action .dismiss {
+  padding: 0.5rem 1.5rem;
+  color: #272727b2;
+  border-radius: 0.3rem;
+}
+
+.success_section .success_container .success_action .retry {
+  padding: 0.5rem 1.5rem;
+  background-color: #4fc05e;
+  color: white;
+  border-radius: 0.3rem;
+}

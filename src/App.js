@@ -17,6 +17,12 @@ import Drop from "./Components/Drop/Drop";
 import Payment from "./Components/Payment/Payment";
 import Login from "./Components/Login/Login";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import Error from "./Components/PopUp/Error";
+import Warning from "./Components/PopUp/Warning";
+import Info from "./Components/PopUp/Info";
+import Success from "./Components/PopUp/Success";
+import FoodOrder from "./Components/FoodOrder/FoodOrder";
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   const [showRestaurants, setShowRestaurants] = useState(TableBooking);
@@ -24,7 +30,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/fooddelivery" element={<FoodDelivery />} />
+        <Route path="/fooddelivery" element={<FoodOrder />} />
         <Route
           path="/dineout"
           element={
@@ -53,6 +59,9 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/instamart" element={<Error />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/foodorder" element={<FoodOrder />} />
       </Routes>
     </>
   );

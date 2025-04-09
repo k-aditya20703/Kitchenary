@@ -130,7 +130,7 @@ const Home = () => {
             </div>{" "}
           </NavLink>
 
-          <NavLink>
+          <NavLink to="/instamart">
             <div className="option-card">
               <div className="card-about">
                 <h2>INSTAMART</h2>
@@ -194,66 +194,6 @@ const Home = () => {
           </NavLink>
         </div>
       )}
-
-      {/* =================================================================== 
-        **********************  TABLE BOOKING SLIDER  *********************
-        =================================================================== */}
-      {/* <div className='table-booking'>
-            <div className='table-header'>
-                <h1>BOOK A <span>TABLE</span></h1>
-            </div>
-
-
-            <div className='sliderdata-container'>
-            
-            {
-                TableBooking.map((TableData,index)=>{
-                return(
-                <div key={index} className='slider-card'>
-                <div className='slider-img'>
-                    <img style={{position:'relative'}} src={TableData.image}></img>
-                    <img style={{position:'absolute', left:'0', top:'0'}} src='../../images/shadow.png'></img>
-                    <h2>{TableData.name}</h2>
-                </div>
-
-                <div className='slider-detail'>
-                <div className='restaurant-discreption'>
-                    <div>
-                        <p>{TableData.category}</p>
-                        <p>{TableData.location}</p>
-                    </div>
-                    <div>
-                        <p>{TableData.price} per two</p>
-                        <p style={{textAlign:'right'}}>{TableData.distance}km</p>
-                    </div>
-                </div>
-
-                <div className='booking-tag'>
-                    <i class='bx bxs-calendar-check'></i>
-                    <p>Table Booking</p>
-                </div>
-
-                <div className='offer-section'>
-                    <div className='offer-btn'>
-                    <i class='bx bxs-offer'></i>
-                    <p>Flat {TableData.offer} off on pre-booking</p>
-                    </div>
-                    <p>+2 more</p>
-                </div>
-
-                <div className='bank-offer'>
-                    <p>Upto 10% off with bank offers</p>
-                </div>
-
-                </div>
-                </div>
-                
-                    )
-                })
-                }
-            </div>
-            
-        </div> */}
 
       {/* =================================================================== 
      **********************  CITIES WITH FOOD DELIVERY  ********************

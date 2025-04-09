@@ -20,6 +20,7 @@ const initialValues = {
   colony: "",
   building: "",
   landmark: "",
+  restaurant_image: "",
 };
 
 const PartnerLogin = () => {
@@ -27,7 +28,6 @@ const PartnerLogin = () => {
   const [addItem, setAdditem] = useState(false);
 
   const [partnerId, setPartnerId] = useState();
-  const API = `http://ec2-44-201-134-49.compute-1.amazonaws.com:9091/api/v1/kichenary/partners`;
 
   const Formik = useFormik({
     initialValues: initialValues,
@@ -35,6 +35,7 @@ const PartnerLogin = () => {
     onSubmit: (values, action) => {
       // setUserdata(values);
       console.log(values);
+      const API = `http://ec2-44-201-134-49.compute-1.amazonaws.com:9091/api/v1/kichenary/partners`;
       const inRequest = {
         restaurantName: Formik.values.name,
         email: Formik.values.email,
@@ -52,8 +53,15 @@ const PartnerLogin = () => {
         },
       };
 
+      const formData = new FormData();
+      formData.append("files", values.restaurant_image);
+
       axios
-        .post(API, inRequest)
+        .post(API, inRequest, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
         .then((res) => {
           console.log(res);
           setPartnerId(res.data.id);
@@ -102,11 +110,17 @@ const PartnerLogin = () => {
                   {Formik.errors.name && Formik.touched.name ? (
                     <p className="address-error">{Formik.errors.name}</p>
                   ) : null}
-                  <label htmlFor="restaurant-image">Restaurant Image :</label>
+                  <label htmlFor="restaurant_image">Restaurant Image :</label>
                   <input
-                    name="restaurant-image"
-                    id="restaurant-image"
+                    name="restaurant_image"
+                    id="restaurant_image"
                     type="file"
+                    onChange={(e) => {
+                      Formik.setFieldValue(
+                        "restaurant_image",
+                        e.currentTarget.files[0]
+                      );
+                    }}
                   />
                   <label htmlFor="email">Business Email :</label>
                   <input

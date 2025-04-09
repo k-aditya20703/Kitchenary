@@ -1,0 +1,155 @@
+.cart {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  color: var(--disable);
+  transition: 0.5s;
+}
+
+.cart:hover {
+  color: var(--main-color);
+}
+
+.cart i {
+  font-size: x-large;
+}
+
+.nav_details {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.restaurant_details_background {
+  background-image: linear-gradient(white, #dddddd34, #bdbdbd98);
+  padding: 1rem;
+  padding-top: 0;
+  border-radius: 2rem;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+.restaurant_details_background .restaurant_details {
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 0.1rem solid #bdbdbd5b;
+}
+
+.restaurant_details .restaurant_ratting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.restaurant_ratting .ratting_container {
+  background-color: #49c549;
+  color: white;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem;
+}
+
+.restaurant_ratting .ratting_container i {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurant_location {
+  font-weight: 600;
+  color: var(--main-color);
+  font-size: small;
+}
+
+.delivery_time {
+  color: #9b9b9bf1;
+  font-weight: 500;
+}
+
+.all_item_container {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.all_item_container .item_cards {
+  display: flex;
+
+  width: 45%;
+  gap: 1rem;
+  box-shadow: 1px 1px 8px #cacaca;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.item_counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item_counter button {
+  padding: 0.5rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+}
+
+.decrement {
+  background-color: #ff00001a;
+}
+
+.increment {
+  background-color: #49c5493d;
+}
+
+.counter_display {
+  /* background-color: #cacaca49; */
+  padding: 1rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+.all_item_container .item_cards .item_photo img {
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+.item_price {
+  color: #49c549;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.item_desc {
+  font-size: small;
+}
+
+@media screen and (max-width: 512px) {
+  .all_item_container .item_cards {
+    display: flex;
+    width: 90%;
+    /* align-items: center; */
+    gap: 1rem;
+    /* border: 0.1rem solid #cacaca; */
+    box-shadow: 1px 1px 8px #cacaca;
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+
+  .all_item_container .item_cards .item_photo img {
+    width: 5rem;
+    border-radius: 0.5rem;
+  }
+}
