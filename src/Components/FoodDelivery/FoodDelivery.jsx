@@ -13,7 +13,7 @@ const FoodDelivery = () => {
   const [partnerAddress, setPartnerAddress] = useState();
   const [test, setTest] = useState(["test"]);
 
-  const API = `http://ec2-44-201-134-49.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?page=0&size=20`;
+  const API = `http://ec2-98-81-198-145.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?page=0&size=20`;
 
   useEffect(() => {
     try {

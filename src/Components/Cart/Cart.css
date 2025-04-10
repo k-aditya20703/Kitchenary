@@ -1,155 +1,148 @@
-.cart {
-  display: flex;
-  gap: 0.2rem;
-  align-items: center;
-  color: var(--disable);
-  transition: 0.5s;
-}
-
-.cart:hover {
-  color: var(--main-color);
-}
-
-.cart i {
-  font-size: x-large;
-}
-
-.nav_details {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.restaurant_details_background {
-  background-image: linear-gradient(white, #dddddd34, #bdbdbd98);
-  padding: 1rem;
-  padding-top: 0;
-  border-radius: 2rem;
-  width: 60%;
+.cart_section {
+  width: 80%;
+  /* background-color: aqua; */
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1rem;
-}
-
-.restaurant_details_background .restaurant_details {
-  background-color: var(--white);
-  border-radius: 1rem;
-  padding: 1rem;
-  border: 0.1rem solid #bdbdbd5b;
-}
-
-.restaurant_details .restaurant_ratting {
   display: flex;
-  align-items: center;
+  /* padding: 1rem; */
+  justify-content: space-between;
   gap: 1rem;
 }
 
-.restaurant_ratting .ratting_container {
-  background-color: #49c549;
-  color: white;
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
+.cart_details {
+  width: 68%;
+  /* background-color: brown; */
+  /* padding: 1rem; */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.6rem;
-}
-
-.restaurant_ratting .ratting_container i {
-  font-size: small;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.restaurant_location {
-  font-weight: 600;
-  color: var(--main-color);
-  font-size: small;
-}
-
-.delivery_time {
-  color: #9b9b9bf1;
-  font-weight: 500;
-}
-
-.all_item_container {
-  width: 100%;
-  padding: 2rem;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
   flex-wrap: wrap;
-}
-
-.all_item_container .item_cards {
-  display: flex;
-
-  width: 45%;
   gap: 1rem;
+}
+
+.cart_details .item_card {
+  width: 100%;
+  display: flex;
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1rem;
   box-shadow: 1px 1px 8px #cacaca;
-  padding: 1rem;
-  border-radius: 2rem;
 }
 
-.item_counter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.item_counter button {
-  padding: 0.5rem;
-  width: 2rem;
-  border-radius: 0.5rem;
-}
-
-.decrement {
-  background-color: #ff00001a;
-}
-
-.increment {
-  background-color: #49c5493d;
-}
-
-.counter_display {
-  /* background-color: #cacaca49; */
-  padding: 1rem;
-  width: 2.5rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 0.5rem;
-}
-.all_item_container .item_cards .item_photo img {
+.cart_item_photo img {
   width: 15rem;
   border-radius: 1rem;
 }
 
-.item_price {
-  color: #49c549;
-  font-weight: 600;
-  font-size: larger;
+.quantity_btn_section {
+  border: 0.1rem solid var(--main-color);
+  width: 55%;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-image: linear-gradient(to right, #ff000025, #ff00001e, #ff000013); */
 }
 
-.item_desc {
+.quantity_btn_section button {
+  width: 2rem;
+  background: transparent;
+}
+
+.cart_billing {
+  width: 32%;
+  height: auto;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 1px 1px 8px #cacaca;
+  border-radius: 1rem;
+}
+
+.cart_billing .about_restaurant img {
+  width: 5rem;
+  border-radius: 0.5rem;
+}
+
+.cart_billing .about_restaurant {
+  display: flex;
+  gap: 1rem;
+}
+
+.about_restaurant p {
+  color: var(--main-color);
+  font-size: small;
+  font-weight: 500;
+}
+
+.cart_billing .item_details {
+  padding: 1rem;
+}
+.item_details .about_item {
+  display: flex;
+  justify-content: space-between;
   font-size: small;
 }
 
-@media screen and (max-width: 512px) {
-  .all_item_container .item_cards {
-    display: flex;
-    width: 90%;
-    /* align-items: center; */
-    gap: 1rem;
-    /* border: 0.1rem solid #cacaca; */
-    box-shadow: 1px 1px 8px #cacaca;
-    padding: 1rem;
-    border-radius: 2rem;
-  }
+.item_price {
+  color: #4ba74b;
+}
 
-  .all_item_container .item_cards .item_photo img {
-    width: 5rem;
-    border-radius: 0.5rem;
-  }
+.item_name {
+  font-weight: 600;
+}
+
+.no_contact_delivery {
+  display: flex;
+  gap: 1rem;
+  border: 0.1rem solid #00000021;
+  border-radius: 0.5rem;
+  /* box-shadow: inset 1px 1px 3px #cacaca; */
+  padding: 0.5rem;
+}
+
+.no_contact_delivery p {
+  font-size: 0.7rem;
+}
+
+.no_contact_delivery p span {
+  font-weight: 600;
+}
+
+.bill_details {
+  padding-top: 1rem;
+  font-size: small;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.bill_details div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill_heading {
+  color: grey;
+}
+
+.bill_value {
+  color: #4ba74b;
+}
+
+.total {
+  /* margin-top: 1rem; */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.place_order button {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: var(--main-color);
+  background-color: #ff00001f;
+  transition: 0.5s;
+}
+
+.place_order button:hover {
+  background-color: var(--main-color);
+  color: white;
 }

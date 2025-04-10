@@ -99,6 +99,22 @@
   justify-content: center;
 }
 
+.add_to_cart {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #ef1d272d;
+  color: #ef1d26;
+  transition: 0.5s;
+}
+
+.add_to_cart:hover {
+  background-color: #ef1d26;
+  color: white;
+}
+
 .item_counter button {
   padding: 0.5rem;
   width: 2rem;

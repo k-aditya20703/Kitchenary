@@ -65,7 +65,7 @@ const FoodOrder = () => {
               <div className="item_photo">
                 <img src={currentItem.itemPhoto}></img>
                 <div className="item_counter">
-                  <button onClick={handleDecrement} className="decrement">
+                  {/* <button onClick={handleDecrement} className="decrement">
                     -
                   </button>
                   <div className="counter_display">
@@ -73,8 +73,9 @@ const FoodOrder = () => {
                   </div>
                   <button onClick={handleIncrement} className="increment">
                     +
-                  </button>
+                  </button> */}
                 </div>
+                <button className="add_to_cart">Add to cart</button>
               </div>
             </div>
           );
