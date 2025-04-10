@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.css";
 import { NavLink } from "react-router-dom";
+import Payment from "../Payment/Payment";
 const Cart = () => {
+  const [quantity, setQuantity] = useState(1);
+  const [itemPrice, setItemPrice] = useState(230);
+  const [paymentSection, setPaymentSection] = useState(false);
+
+  const handleDecrement = () => {
+    setQuantity(quantity - 1);
+  };
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handlePlaceOrder = () => {
+    setPaymentSection(true);
+  };
   return (
     <>
       <div className="dineoutnavbar-section">
@@ -11,7 +26,7 @@ const Cart = () => {
           </div>
         </NavLink>
 
-        <NavLink to="/">
+        <NavLink to="/foodorder">
           <div className="back-btn">
             <i class="bx bx-left-arrow-alt"></i>
           </div>
@@ -37,9 +52,13 @@ const Cart = () => {
                 <button className="delete_btn">
                   <i class="bx bxs-trash"></i>
                 </button>
-                <button>-</button>
-                <button>1</button>
-                <button>+</button>
+                <button disabled={quantity <= 1} onClick={handleDecrement}>
+                  -
+                </button>
+                <button>{quantity}</button>
+                <button disabled={quantity >= 10} onClick={handleIncrement}>
+                  +
+                </button>
               </div>
             </div>
           </div>
@@ -60,9 +79,13 @@ const Cart = () => {
                 <button className="delete_btn">
                   <i class="bx bxs-trash"></i>
                 </button>
-                <button>-</button>
-                <button>1</button>
-                <button>+</button>
+                <button disabled={quantity <= 1} onClick={handleDecrement}>
+                  -
+                </button>
+                <button>{quantity}</button>
+                <button disabled={quantity >= 10} onClick={handleIncrement}>
+                  +
+                </button>
               </div>
             </div>
           </div>
@@ -81,16 +104,16 @@ const Cart = () => {
               <li>
                 <div className="about_item">
                   <p className="item_name">Chicken Biriyani</p>
-                  <p>Quantity: 1 </p>
-                  <p className="item_price">₹ 230</p>
+                  <p>Quantity: {quantity} </p>
+                  <p className="item_price">{quantity * itemPrice}</p>
                 </div>
               </li>
 
               <li>
                 <div className="about_item">
                   <p className="item_name">Chicken Biriyani</p>
-                  <p>Quantity: 1 </p>
-                  <p className="item_price">₹ 230</p>
+                  <p>Quantity: {quantity} </p>
+                  <p className="item_price">{quantity * itemPrice}</p>
                 </div>
               </li>
             </ul>
@@ -125,10 +148,16 @@ const Cart = () => {
             <p className="bill_value">₹310</p>
           </div>
           <div className="place_order">
-            <button>Place Order</button>
+            <button onClick={handlePlaceOrder}>Place Order</button>
           </div>
         </div>
       </div>
+
+      {paymentSection && (
+        <div className="payment_section">
+          <Payment />
+        </div>
+      )}
     </>
   );
 };

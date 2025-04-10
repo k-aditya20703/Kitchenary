@@ -14,6 +14,7 @@ const Payment = () => {
   const [delivery, setDelivery] = useState(false);
   const [deliveryArrowup, setdeliveryArrowup] = useState(false);
   const [deliveryArrowdown, setdeliveryArrowdown] = useState(true);
+  const [paymentSection, setPaymentSection] = useState(true);
 
   const handleCard = () => {
     setBanking(false);
@@ -74,13 +75,16 @@ const Payment = () => {
     setdeliveryArrowdown(!deliveryArrowdown);
     setdeliveryArrowup(!deliveryArrowup);
   };
+
   return (
     <>
       <div className="payment-section">
         <div className="closebtn-section">
-          <div className="closebtn-container">
-            <i class="bx bx-arrow-back"></i>
-          </div>
+          <NavLink to="/foodOrder">
+            <div className="closebtn-container">
+              <i class="bx bx-arrow-back"></i>
+            </div>
+          </NavLink>
         </div>
         <div className="payment-container">
           <div className="payment-cover-img">

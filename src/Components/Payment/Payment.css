@@ -26,6 +26,8 @@
   margin-top: auto;
   margin-bottom: auto;
   mix-blend-mode: multiply;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 .payment-container {
