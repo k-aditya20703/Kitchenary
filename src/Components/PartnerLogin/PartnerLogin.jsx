@@ -8,6 +8,7 @@ import axios from "axios";
 
 const initialValues = {
   name: "",
+  restaurantRegCode: "",
   email: "",
   number: "",
   password: "",
@@ -32,50 +33,29 @@ const PartnerLogin = () => {
   const Formik = useFormik({
     initialValues: initialValues,
     validationSchema: PartnerSignupSchema,
-    onSubmit: (values, action) => {
-      // setUserdata(values);
+    onSubmit: async (values, action) => {
       console.log(values);
-      const API = `http://ec2-44-201-134-49.compute-1.amazonaws.com:9091/api/v1/kichenary/partners`;
-      const inRequest = {
-        restaurantName: Formik.values.name,
-        email: Formik.values.email,
-        mobileNumber: Formik.values.number,
-        password: Formik.values.password,
-        partnerAddress: {
-          country: Formik.values.region,
-          state: Formik.values.state,
-          district: Formik.values.district,
-          city: Formik.values.city,
-          pincode: Formik.values.pincode,
-          landmark: Formik.values.landmark,
-          buildingName: Formik.values.building,
-          colonyName: Formik.values.colony,
-        },
-      };
+      const API = `http://ec2-98-81-198-145.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?restaurantName=${Formik.values.name}&restaurantRegCode=${Formik.values.restaurantRegCode}&email=${Formik.values.email}&mobileNumber=${Formik.values.number}&password=${Formik.values.password}&partnerAddress.country=${Formik.values.region}&partnerAddress.state=${Formik.values.state}&partnerAddress.district=${Formik.values.district}&partnerAddress.city=${Formik.values.city}&partnerAddress.pincode=${Formik.values.pincode}&partnerAddress.landmark=${Formik.values.landmark}&partnerAddress.buildingName=${Formik.values.building}&partnerAddress.colonyName=${Formik.values.colony}`;
 
       const formData = new FormData();
-      formData.append("files", values.restaurant_image);
+      formData.append("file", values.restaurant_image);
 
-      axios
-        .post(API, inRequest, formData, {
+      try {
+        const response = await axios.post(API, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
-        })
-        .then((res) => {
-          console.log(res);
-          setPartnerId(res.data.id);
-        })
-        .catch((error) => {
-          console.log("error", error);
         });
+        console.log("uploaded successfully:", response.data);
+        setPartnerId(response.data.id);
+      } catch (error) {
+        console.error("Error uploading file:", error);
+      }
       action.resetForm();
       setAdditem(true);
       setPartnerLogin(false);
     },
   });
-
-  // const [userData, setUserdata] = useState(Formik.values);
 
   return (
     <>
@@ -109,6 +89,22 @@ const PartnerLogin = () => {
                   />
                   {Formik.errors.name && Formik.touched.name ? (
                     <p className="address-error">{Formik.errors.name}</p>
+                  ) : null}
+                  <label htmlFor="regCode">Restaurant Reg Code :</label>
+                  <input
+                    value={Formik.values.restaurantRegCode}
+                    name="restaurantRegCode"
+                    id="regCode"
+                    onChange={Formik.handleChange}
+                    onBlur={Formik.handleBlur}
+                    type="text"
+                    autoComplete="off"
+                  />
+                  {Formik.errors.restaurantRegCode &&
+                  Formik.touched.restaurantRegCode ? (
+                    <p className="address-error">
+                      {Formik.errors.restaurantRegCode}
+                    </p>
                   ) : null}
                   <label htmlFor="restaurant_image">Restaurant Image :</label>
                   <input
@@ -316,13 +312,13 @@ const PartnerLogin = () => {
                       className="address-form-info"
                       style={{ display: "flex", padding: "0rem" }}
                     >
-                      <input
+                      {/* <input
                         style={{ display: "flex", justifyContent: "left" }}
                         type="checkbox"
                       />
                       <label htmlFor="confirm_password">
                         Accept all terms & conditions
-                      </label>
+                      </label> */}
                     </div>
                   </div>
                 </div>

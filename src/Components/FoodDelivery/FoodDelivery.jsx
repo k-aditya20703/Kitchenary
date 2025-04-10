@@ -22,26 +22,26 @@ const FoodDelivery = () => {
         console.log(res.data);
         setPartners(res.data);
         setLoader(false);
-        let nameList = [];
-        res.data.map((partner, index) => {
-          let itemName = "";
-          partner.partnerItems.map((item, key) => {
-            console.log(item.itemName);
-            if (item.itemName && item.itemName !== undefined) {
-              console.log(partner.partnerItems.length);
-              if (key < partner.partnerItems.length - 1) {
-                itemName = itemName + item.itemName + " | ";
-              } else {
-                itemName = itemName + item.itemName;
-              }
-            }
+        // let nameList = [];
+        // res.data.map((partner, index) => {
+        // let itemName = "";
+        // partner.partnerItems.map((item, key) => {
+        // console.log(item.itemName);
+        // if (item.itemName && item.itemName !== undefined) {
+        //   console.log(partner.partnerItems.length);
+        //   if (key < partner.partnerItems.length - 1) {
+        //     itemName = itemName + item.itemName + " | ";
+        //   } else {
+        //     itemName = itemName + item.itemName;
+        //   }
+        // }
 
-            return itemName;
-          });
-          console.log(itemName);
-          nameList.push(itemName);
-        });
-        setTest(nameList);
+        // return itemName;
+        // });
+        //   console.log(itemName);
+        //   // nameList.push(itemName);
+        // });
+        // setTest(nameList);
       });
     } catch (error) {
       console.log(error);
@@ -110,32 +110,36 @@ const FoodDelivery = () => {
 
       <div className="foodcard-section">
         {showFoodcard && (
-          <div className="foodcard-container">
-            {partners.map((foodData, index) => (
-              <div key={index} className="food-card">
-                {/* {foodData.partnerItems.map((itemDetails, index) => ( */}
-                <div>
-                  <div className="foodimg-section">
-                    <img src={foodData.restaurantImgUrl} alt="my_img"></img>
-                  </div>
-                  <div className="fooddetail-section">
-                    <h3>{foodData.restaurantName}</h3>
-                    <p>
-                      <i class="bx bxs-star"></i>
-                      <span>4.3,{foodData.time} mins</span>
-                    </p>
-                    <p>{test[index]}</p>
+          <NavLink to="/foodorder">
+            <div className="foodcard-container">
+              {partners.map((foodData, index) => (
+                <div key={index} className="food-card">
+                  {/* {foodData.partnerItems.map((itemDetails, index) => ( */}
+                  <div>
+                    <div className="foodimg-section">
+                      <img src={foodData.restaurantImgUrl} alt="my_img"></img>
+                    </div>
+                    <div className="fooddetail-section">
+                      <h3 style={{ color: "black" }}>
+                        {foodData.restaurantName}
+                      </h3>
+                      <p>
+                        <i class="bx bxs-star"></i>
+                        <span>4.3,{foodData.time} mins</span>
+                      </p>
+                      <p>{foodData.itemNameList[0]}</p>
 
-                    <p>
-                      {foodData.partnerAddress?.city} ,{" "}
-                      {foodData.partnerAddress?.colonyName}
-                    </p>
+                      <p>
+                        {foodData.partnerAddress?.city} ,{" "}
+                        {foodData.partnerAddress?.colonyName}
+                      </p>
+                    </div>
                   </div>
+                  {/* ))} */}
                 </div>
-                {/* ))} */}
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </NavLink>
         )}
       </div>
       <Footer />

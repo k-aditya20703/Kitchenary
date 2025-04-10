@@ -30,7 +30,7 @@ const FoodOrder = () => {
             </div>
           </NavLink>
 
-          <NavLink to="/">
+          <NavLink to="/fooddelivery">
             <div className="back-btn">
               <i class="bx bx-left-arrow-alt"></i>
             </div>

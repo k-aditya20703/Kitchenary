@@ -12,6 +12,7 @@ const initialValues = {
   item_price: "",
   item_offer: "",
   item_photo: "",
+  item_desc: "",
 };
 const AddItem = (props) => {
   const Formik = useFormik({
@@ -19,10 +20,9 @@ const AddItem = (props) => {
     validationSchema: AddItemSchema,
     onSubmit: async (values, action) => {
       console.log(values);
-      const API = `http://ec2-44-201-134-49.compute-1.amazonaws.com:9091/api/v1/kichenary/partner-items/${props?.partnerId}?price=${Formik.values.item_price}&offer=${Formik.values.item_offer}&itemName=${Formik.values.item_name}&prepareTime=${Formik.values.prep_time}`;
+      const API = `http://ec2-98-81-198-145.compute-1.amazonaws.com:9091/api/v1/kichenary/partner-items/${props?.partnerId}?itemName=${Formik.values.item_name}&itemDesc=${Formik.values.item_desc}&price=${Formik.values.item_price}&offer=${Formik.values.item_offer}&prepareTime=${Formik.values.prep_time}`;
       const formData = new FormData();
-      formData.append("files", values.item_photo);
-      formData.append("files", values.restaurant_photo);
+      formData.append("file", values.item_photo);
 
       try {
         const response = await axios.post(API, formData, {
@@ -72,6 +72,21 @@ const AddItem = (props) => {
               ></input>
               {Formik.errors.item_name && Formik.touched.item_name ? (
                 <p className="additem-error">{Formik.errors.item_name}</p>
+              ) : null}
+            </div>
+
+            <div className="item-input">
+              <label>Item Description</label>
+              <input
+                type="text"
+                name="item_desc"
+                value={Formik.values.item_desc}
+                onChange={Formik.handleChange}
+                onBlur={Formik.handleBlur}
+                placeholder="Enter item desc"
+              ></input>
+              {Formik.errors.item_desc && Formik.touched.item_desc ? (
+                <p className="additem-error">{Formik.errors.item_desc}</p>
               ) : null}
             </div>
 

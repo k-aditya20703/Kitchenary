@@ -72,11 +72,11 @@
   margin-left: 5%;
 }
 .food-card {
-  width: 21%;
+  width: 24%;
 }
 .foodimg-section img {
   width: 100%;
-  height: 8rem;
+  height: 10rem;
   border-radius: 0.5rem;
 }
 .fooddetail-section p {
@@ -93,12 +93,13 @@
 }
 .foodcard-container {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   width: 90%;
+  /* background-color: #ef1d26; */
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  justify-content: space-between;
+  /* justify-content: space-evenly; */
 }
 
 @media screen and (max-width: 512px) {
