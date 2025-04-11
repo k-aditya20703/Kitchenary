@@ -1,5 +1,5 @@
 import Home from "./Components/Home/Home";
-import { Route, Routes } from "react-router-dom";
+import { data, Route, Routes } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FoodDelivery from "./Components/FoodDelivery/FoodDelivery";
@@ -23,14 +23,22 @@ import Info from "./Components/PopUp/Info";
 import Success from "./Components/PopUp/Success";
 import FoodOrder from "./Components/FoodOrder/FoodOrder";
 import Cart from "./Components/Cart/Cart";
+import PartnerSignup from "./Components/PartnerSignup/PartnerSignup";
 
 function App() {
   const [showRestaurants, setShowRestaurants] = useState(TableBooking);
+  const [partners, setPartners] = useState([]);
+
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/fooddelivery" element={<FoodDelivery />} />
+        <Route
+          path="/fooddelivery"
+          element={
+            <FoodDelivery partners={partners} setPartners={setPartners} />
+          }
+        />
         <Route
           path="/dineout"
           element={
@@ -61,7 +69,10 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/instamart" element={<Error />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/foodorder" element={<FoodOrder />} />
+        <Route
+          path="/foodorder"
+          element={<FoodOrder partners={partners} setPartners={setPartners} />}
+        />
       </Routes>
     </>
   );

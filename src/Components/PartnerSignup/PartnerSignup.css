@@ -1,0 +1,87 @@
+.partner_signup_section {
+  width: 100%;
+  padding: 1rem;
+  background: url(../../../public/Images/partnerSignup.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.partner_signup_container {
+  background-color: #00000034;
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 3px 5px #00000065;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.restaurant_details .input_feild input {
+  background: transparent;
+  width: 100%;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.restaurant_details .input_feild label {
+  font-size: small;
+  font-weight: 500;
+  color: var(--main-color);
+  margin-left: 0.7rem;
+  margin-bottom: -1rem;
+}
+
+.restaurant_address_details label {
+  font-size: small;
+  color: var(--main-color);
+  margin-left: 0.7rem;
+}
+
+.restaurant_details {
+  width: 100%;
+}
+
+.restaurant_details .input_feild {
+  /* width: 100%; */
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.restaurant_address_details {
+  width: 100%;
+}
+.restaurant_address_details .address_container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.restaurant_address_details .address_container input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.term_condition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.term_condition label {
+}
+
+.form_submit {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--main-color);
+  color: white;
+}

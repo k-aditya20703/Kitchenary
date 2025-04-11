@@ -49,7 +49,7 @@ const FoodOrder = () => {
             <p>(132 Rattings)</p>
           </div>
           <p className="restaurant_location">Hyderabad</p>
-          <p className="delivery_time">Dekivery within 30 - 35 mins</p>
+          <p className="delivery_time">Delivery within 30 - 35 mins</p>
         </div>
       </div>
 

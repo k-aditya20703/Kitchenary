@@ -6,12 +6,11 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import Loader from "../Loader/Loader";
 
-const FoodDelivery = () => {
+const FoodDelivery = (props) => {
   const [showFoodcard, setShowFoodcard] = useState(food);
-  const [partners, setPartners] = useState([]);
+  // const [partners, setPartners] = useState([]);
   const [loader, setLoader] = useState(false);
-  const [partnerAddress, setPartnerAddress] = useState();
-  const [test, setTest] = useState(["test"]);
+  const [restaurantName, setRestaurantName] = useState();
 
   const API = `http://ec2-98-81-198-145.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?page=0&size=20`;
 
@@ -19,29 +18,9 @@ const FoodDelivery = () => {
     try {
       setLoader(true);
       axios.get(API).then((res) => {
-        console.log(res.data);
-        setPartners(res.data);
+        // console.log(res.data);
+        props?.setPartners(res.data);
         setLoader(false);
-        // let nameList = [];
-        // res.data.map((partner, index) => {
-        // let itemName = "";
-        // partner.partnerItems.map((item, key) => {
-        // console.log(item.itemName);
-        // if (item.itemName && item.itemName !== undefined) {
-        //   console.log(partner.partnerItems.length);
-        //   if (key < partner.partnerItems.length - 1) {
-        //     itemName = itemName + item.itemName + " | ";
-        //   } else {
-        //     itemName = itemName + item.itemName;
-        //   }
-        // }
-
-        // return itemName;
-        // });
-        //   console.log(itemName);
-        //   // nameList.push(itemName);
-        // });
-        // setTest(nameList);
       });
     } catch (error) {
       console.log(error);
@@ -73,6 +52,8 @@ const FoodDelivery = () => {
   const handleLessthen = () => {
     setShowFoodcard(newData);
   };
+
+  // console.log(partners);
 
   return (
     <>
@@ -112,9 +93,8 @@ const FoodDelivery = () => {
         {showFoodcard && (
           <NavLink to="/foodorder">
             <div className="foodcard-container">
-              {partners.map((foodData, index) => (
+              {props?.partners.map((foodData, index) => (
                 <div key={index} className="food-card">
-                  {/* {foodData.partnerItems.map((itemDetails, index) => ( */}
                   <div>
                     <div className="foodimg-section">
                       <img src={foodData.restaurantImgUrl} alt="my_img"></img>
@@ -123,6 +103,7 @@ const FoodDelivery = () => {
                       <h3 style={{ color: "black" }}>
                         {foodData.restaurantName}
                       </h3>
+
                       <p>
                         <i class="bx bxs-star"></i>
                         <span>4.3,{foodData.time} mins</span>
