@@ -2,6 +2,10 @@ import * as Yup from "yup";
 
 export const PartnerSignupSchema = Yup.object({
   name: Yup.string().min(2).max(25).required("Plese enter your name"),
+  restaurantRegCode: Yup.string()
+    .min(13)
+    .max(25)
+    .required("Plese enter Reg-Code"),
   email: Yup.string().email().required("Plese enter your email"),
   number: Yup.number().required("Plese enter your number"),
   password: Yup.string().min(8).required("Plese enter your password"),

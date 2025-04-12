@@ -57,7 +57,7 @@ function App() {
             />
           }
         />
-        <Route path="/partnerwithus" element={<PartnerLogin />} />
+        <Route path="/partnerwithus" element={<PartnerSignup />} />
         <Route path="/additem" element={<AddItem />} />
         <Route path="/ratting" element={<Ratting />} />
         <Route path="/signup" element={<Signup />} />
