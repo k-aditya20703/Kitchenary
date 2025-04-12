@@ -85,7 +85,7 @@
 
 .all_item_container .item_cards {
   display: flex;
-
+  justify-content: space-between;
   width: 45%;
   gap: 1rem;
   box-shadow: 1px 1px 8px #cacaca;
@@ -139,6 +139,7 @@
 }
 .all_item_container .item_cards .item_photo img {
   width: 15rem;
+  height: 9rem;
   border-radius: 1rem;
 }
 

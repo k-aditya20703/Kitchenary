@@ -5,26 +5,32 @@ import Footer from "../Footer/Footer";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import Loader from "../Loader/Loader";
+import Error from "../PopUp/Error";
 
 const FoodDelivery = (props) => {
   const [showFoodcard, setShowFoodcard] = useState(food);
   // const [partners, setPartners] = useState([]);
   const [loader, setLoader] = useState(false);
   const [restaurantName, setRestaurantName] = useState();
+  const [error, setError] = useState("");
 
   const API = `http://ec2-98-81-198-145.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?page=0&size=20`;
 
   useEffect(() => {
-    try {
-      setLoader(true);
-      axios.get(API).then((res) => {
-        // console.log(res.data);
+    setLoader(true);
+    axios
+      .get(API)
+      .then((res) => {
         props?.setPartners(res.data);
         setLoader(false);
+        setError("");
+      })
+
+      .catch((error) => {
+        console.error("Error Request:", error.request);
+        setError("Unexpected error occured please try again");
+        setLoader(false);
       });
-    } catch (error) {
-      console.log(error);
-    }
   }, []);
 
   const comparePrice = showFoodcard.filter(
@@ -88,6 +94,7 @@ const FoodDelivery = (props) => {
       </div>
 
       {loader && <Loader />}
+      {error && <Error errorMsg={error} />}
 
       <div className="foodcard-section">
         {showFoodcard && (

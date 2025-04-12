@@ -86,10 +86,10 @@ const PartnerSignup = () => {
                     onBlur={Formik.handleBlur}
                     value={Formik.values.name}
                   ></input>
-                  {Formik.errors.name && Formik.touched.name ? (
-                    <p className="address-error">{Formik.errors.name}</p>
-                  ) : null}
                 </div>
+                {Formik.errors.name && Formik.touched.name ? (
+                  <p className="details-error">{Formik.errors.name}</p>
+                ) : null}
                 <div className="input_feild">
                   <label>Restaurant Reg Code :</label>
                   <input
@@ -99,13 +99,13 @@ const PartnerSignup = () => {
                     onBlur={Formik.handleBlur}
                     value={Formik.values.restaurantRegCode}
                   ></input>
-                  {Formik.errors.restaurantRegCode &&
-                  Formik.touched.restaurantRegCode ? (
-                    <p className="address-error">
-                      {Formik.errors.restaurantRegCode}
-                    </p>
-                  ) : null}
                 </div>
+                {Formik.errors.restaurantRegCode &&
+                Formik.touched.restaurantRegCode ? (
+                  <p className="details-error">
+                    {Formik.errors.restaurantRegCode}
+                  </p>
+                ) : null}
                 <div className="input_feild">
                   <label>Restaurant image :</label>
                   <input
@@ -128,10 +128,10 @@ const PartnerSignup = () => {
                     onBlur={Formik.handleBlur}
                     value={Formik.values.email}
                   ></input>
-                  {Formik.errors.email && Formik.touched.email ? (
-                    <p className="address-error">{Formik.errors.email}</p>
-                  ) : null}
                 </div>
+                {Formik.errors.email && Formik.touched.email ? (
+                  <p className="details-error">{Formik.errors.email}</p>
+                ) : null}
                 <div className="input_feild">
                   <label>Business number :</label>
                   <input
@@ -141,10 +141,10 @@ const PartnerSignup = () => {
                     onBlur={Formik.handleBlur}
                     value={Formik.values.number}
                   ></input>
-                  {Formik.errors.number && Formik.touched.number ? (
-                    <p className="address-error">{Formik.errors.number}</p>
-                  ) : null}
                 </div>
+                {Formik.errors.number && Formik.touched.number ? (
+                  <p className="details-error">{Formik.errors.number}</p>
+                ) : null}
                 <div className="input_feild">
                   <label>Password :</label>
                   <input
@@ -154,10 +154,10 @@ const PartnerSignup = () => {
                     onBlur={Formik.handleBlur}
                     value={Formik.values.password}
                   ></input>
-                  {Formik.errors.password && Formik.touched.password ? (
-                    <p className="address-error">{Formik.errors.password}</p>
-                  ) : null}
                 </div>
+                {Formik.errors.password && Formik.touched.password ? (
+                  <p className="details-error">{Formik.errors.password}</p>
+                ) : null}
                 <div className="input_feild">
                   <label>Confirm password :</label>
                   <input
@@ -167,13 +167,13 @@ const PartnerSignup = () => {
                     onBlur={Formik.handleBlur}
                     value={Formik.values.confirm_password}
                   ></input>
-                  {Formik.errors.confirm_password &&
-                  Formik.touched.confirm_password ? (
-                    <p className="address-error">
-                      {Formik.errors.confirm_password}
-                    </p>
-                  ) : null}
                 </div>
+                {Formik.errors.confirm_password &&
+                Formik.touched.confirm_password ? (
+                  <p className="details-error">
+                    {Formik.errors.confirm_password}
+                  </p>
+                ) : null}
               </div>
               <div className="restaurant_address_details">
                 {/* <label>Restaurant address :</label> */}

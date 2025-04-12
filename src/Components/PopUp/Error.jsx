@@ -2,7 +2,7 @@ import React from "react";
 import "./Error.css";
 import { NavLink } from "react-router-dom";
 
-const Error = () => {
+const Error = (props) => {
   return (
     <>
       <div className="error_section">
@@ -16,10 +16,7 @@ const Error = () => {
               </div>
               <h2>Error</h2>
             </div>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority
-            </p>
+            <p>{props?.errorMsg}</p>
           </div>
           <div className="error_action">
             <NavLink to="/">

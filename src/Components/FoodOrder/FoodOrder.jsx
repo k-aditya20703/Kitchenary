@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { foodOrder } from "../../Constants/FoodOrder";
 import Footer from "../Footer/Footer";
 
-const FoodOrder = () => {
+const FoodOrder = (props) => {
   const [itemCount, setItemCount] = useState(0);
 
   const handleDecrement = () => {
@@ -37,50 +37,48 @@ const FoodOrder = () => {
           </NavLink>
         </div>
       </div>
-
-      <div className="restaurant_details_background">
-        <div className="restaurant_details">
-          <h2>The Food Court</h2>
-          <div className="restaurant_ratting">
-            <div className="ratting_container">
-              <i class="bx bxs-star"></i>
-            </div>
-            <p>4.3</p>
-            <p>(132 Rattings)</p>
-          </div>
-          <p className="restaurant_location">Hyderabad</p>
-          <p className="delivery_time">Delivery within 30 - 35 mins</p>
-        </div>
-      </div>
-
-      <div className="all_item_container">
-        {foodOrder.map((currentItem, index) => {
-          return (
-            <div className="item_cards">
-              <div className="about_item">
-                <h3>{currentItem.itemName} </h3>
-                <p className="item_price">₹ {currentItem.itemPrice}</p>
-                <p className="item_desc">{currentItem.itemDescription}</p>
-              </div>
-              <div className="item_photo">
-                <img src={currentItem.itemPhoto}></img>
-                <div className="item_counter">
-                  {/* <button onClick={handleDecrement} className="decrement">
-                    -
-                  </button>
-                  <div className="counter_display">
-                    <p>{itemCount}</p>
+      {props?.partners.map((restaurantData) => {
+        return (
+          <div>
+            <div className="restaurant_details_background">
+              <div className="restaurant_details">
+                <h2>{restaurantData.restaurantName}</h2>
+                <div className="restaurant_ratting">
+                  <div className="ratting_container">
+                    <i class="bx bxs-star"></i>
                   </div>
-                  <button onClick={handleIncrement} className="increment">
-                    +
-                  </button> */}
+                  <p>4.3</p>
+                  <p>(132 Rattings)</p>
                 </div>
-                <button className="add_to_cart">Add to cart</button>
+                <p className="restaurant_location">
+                  {restaurantData.partnerAddress.city},{" "}
+                  {restaurantData.partnerAddress.colonyName}
+                </p>
+                <p className="delivery_time">Delivery within 30 - 35 mins</p>
               </div>
             </div>
-          );
-        })}
-      </div>
+
+            <div className="all_item_container">
+              {restaurantData.partnerItems.map((itemDetails) => {
+                return (
+                  <div className="item_cards">
+                    <div className="about_item">
+                      <h3>{itemDetails.itemName} </h3>
+                      <p className="item_price">₹ {itemDetails.price}</p>
+                      <p className="item_desc">{itemDetails.itemDesc}</p>
+                    </div>
+                    <div className="item_photo">
+                      <img src={itemDetails.itemImgUrl}></img>
+                      <div className="item_counter"></div>
+                      <button className="add_to_cart">Add to cart</button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
       <Footer />
     </>
   );
