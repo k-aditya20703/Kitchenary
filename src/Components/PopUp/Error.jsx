@@ -3,6 +3,9 @@ import "./Error.css";
 import { NavLink } from "react-router-dom";
 
 const Error = (props) => {
+  const handleRefresh = () => {
+    window.location.reload();
+  };
   return (
     <>
       <div className="error_section">
@@ -22,7 +25,9 @@ const Error = (props) => {
             <NavLink to="/">
               <button className="dismiss">Dismiss</button>
             </NavLink>
-            <button className="retry">Retry</button>
+            <button onClick={handleRefresh} className="retry">
+              Retry
+            </button>
           </div>
         </div>
       </div>

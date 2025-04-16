@@ -22,6 +22,7 @@ const initialValues = {
   building: "",
   landmark: "",
   restaurant_image: "",
+  // agree: false,
 };
 const PartnerSignup = () => {
   const [partnerLogin, setPartnerLogin] = useState(true);
@@ -293,7 +294,12 @@ const PartnerSignup = () => {
                 ) : null}
 
                 <div className="term_condition">
-                  <input type="checkbox"></input>
+                  <input
+                    type="checkbox"
+                    name="agree"
+                    checked={Formik.values.agree}
+                    onChange={Formik.handleChange}
+                  ></input>
                   <label>Agree with all terms & conditions</label>
                 </div>
 
