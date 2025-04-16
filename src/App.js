@@ -67,7 +67,7 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/instamart" element={<Error />} />
+        <Route path="/instamart" element={<Info />} />
         <Route path="/cart" element={<Cart />} />
         <Route
           path="/foodorder"
