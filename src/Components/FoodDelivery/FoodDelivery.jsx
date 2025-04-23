@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import Loader from "../Loader/Loader";
 import Error from "../PopUp/Error";
+import { Tooltip as ReactTooltip, Tooltip } from "react-tooltip";
 
 const FoodDelivery = (props) => {
   const [showFoodcard, setShowFoodcard] = useState(food);
@@ -63,8 +64,8 @@ const FoodDelivery = (props) => {
 
   // console.log(partners);
 
-  const handleRestaurant = (FoodDelivery) => {
-    setItemDetails([{ ...FoodDelivery }]);
+  const handleRestaurant = (foodItem) => {
+    setItemDetails([{ ...foodItem }]);
     setShowRestaurants(false);
     setShowAllItem(true);
   };
@@ -126,7 +127,11 @@ const FoodDelivery = (props) => {
                           <div className="item_photo">
                             <img src={itemDetails.itemImgUrl}></img>
                             <div className="item_counter"></div>
-                            <button className="add_to_cart">Add to cart</button>
+                            <NavLink to="/cart">
+                              <button className="add_to_cart">
+                                Add to cart
+                              </button>
+                            </NavLink>
                           </div>
                         </div>
                       );
@@ -179,10 +184,10 @@ const FoodDelivery = (props) => {
             {showFoodcard && (
               <NavLink to=" ">
                 <div className="foodcard-container">
-                  {props?.partners.map((foodData, index) => (
+                  {props?.partners.map((foodData) => (
                     <div
+                      key={foodData.id}
                       onClick={() => handleRestaurant(foodData)}
-                      key={index}
                       className="food-card"
                     >
                       <div>
@@ -201,15 +206,18 @@ const FoodDelivery = (props) => {
                             <i class="bx bxs-star"></i>
                             <span>4.3,{foodData.time} mins</span>
                           </p>
-                          <p>{foodData.itemNameList[0]}</p>
-
                           <p>
                             {foodData.partnerAddress?.city} ,{" "}
                             {foodData.partnerAddress?.colonyName}
                           </p>
+                          <p className="tooltip-container">
+                            {foodData.itemNameList[0]?.substring(0, 20)}...
+                            <div className="tooltip-text">
+                              {foodData.itemNameList[0]}
+                            </div>
+                          </p>
                         </div>
                       </div>
-                      {/* ))} */}
                     </div>
                   ))}
                 </div>

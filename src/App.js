@@ -24,6 +24,8 @@ import Success from "./Components/PopUp/Success";
 import FoodOrder from "./Components/FoodOrder/FoodOrder";
 import Cart from "./Components/Cart/Cart";
 import PartnerSignup from "./Components/PartnerSignup/PartnerSignup";
+import "react-tooltip/dist/react-tooltip.css";
+import PartnerDashboard from "./Components/PartnerDashboard/PartnerDashboard";
 
 function App() {
   const [showRestaurants, setShowRestaurants] = useState(TableBooking);
@@ -58,6 +60,8 @@ function App() {
           }
         />
         <Route path="/partnerwithus" element={<PartnerSignup />} />
+        <Route path="/partnerlogin" element={<PartnerLogin />} />
+        <Route path="/partnerdashboard" element={<PartnerDashboard />} />
         <Route path="/additem" element={<AddItem />} />
         <Route path="/ratting" element={<Ratting />} />
         <Route path="/signup" element={<Signup />} />

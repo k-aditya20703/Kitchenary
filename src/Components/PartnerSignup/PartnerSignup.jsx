@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import { PartnerSignupSchema } from "../../Schemas";
 import AddItem from "../AddItem/AddItem";
 import axios from "axios";
+import PartnerDashboard from "../PartnerDashboard/PartnerDashboard";
 
 const initialValues = {
   name: "",
@@ -22,13 +23,18 @@ const initialValues = {
   building: "",
   landmark: "",
   restaurant_image: "",
-  // agree: false,
 };
 const PartnerSignup = () => {
   const [partnerLogin, setPartnerLogin] = useState(true);
   const [addItem, setAdditem] = useState(false);
-
+  const [location, setLocation] = useState(null);
   const [partnerId, setPartnerId] = useState();
+  const [error, setError] = useState(null);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChecked = (event) => {
+    setIsChecked(event.target.checked);
+  };
 
   const Formik = useFormik({
     initialValues: initialValues,
@@ -40,22 +46,45 @@ const PartnerSignup = () => {
       const formData = new FormData();
       formData.append("file", values.restaurant_image);
 
-      try {
-        const response = await axios.post(API, formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
-        console.log("uploaded successfully:", response.data);
-        setPartnerId(response.data.id);
-      } catch (error) {
-        console.error("Error uploading file:", error);
+      if (isChecked === true) {
+        try {
+          const response = await axios.post(API, formData, {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          });
+
+          console.log("uploaded successfully:", response.data);
+          setPartnerId(response.data.id);
+        } catch (error) {
+          console.error("Error uploading file:", error);
+        }
+
+        action.resetForm();
+        setAdditem(true);
+        setPartnerLogin(false);
       }
-      action.resetForm();
-      setAdditem(true);
-      setPartnerLogin(false);
     },
   });
+
+  const handleGetLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+          setError(null);
+        },
+        (err) => {
+          setError(err.message);
+        }
+      );
+    } else {
+      setError("Geolocation is not supported by this browser.");
+    }
+  };
 
   return (
     <>
@@ -265,40 +294,63 @@ const PartnerSignup = () => {
                   </div>
                 </div>
 
-                <div className="address_container">
-                  <input
-                    type="text"
-                    name="building"
-                    placeholder="Building name, House no."
-                    onChange={Formik.handleChange}
-                    onBlur={Formik.handleBlur}
-                    value={Formik.values.building}
-                  ></input>
-                </div>
-                {Formik.errors.building && Formik.touched.building ? (
-                  <p className="address-error">{Formik.errors.building}</p>
-                ) : null}
+                <div style={{ display: "block" }} className="address_container">
+                  <div className="input_container">
+                    <input
+                      type="text"
+                      name="building"
+                      placeholder="Building name, House no."
+                      onChange={Formik.handleChange}
+                      onBlur={Formik.handleBlur}
+                      value={Formik.values.building}
+                    ></input>
+                    {Formik.errors.building && Formik.touched.building ? (
+                      <p className="address-error">{Formik.errors.building}</p>
+                    ) : null}
+                  </div>
 
-                <div className="address_container">
-                  <input
-                    type="text"
-                    name="colony"
-                    placeholder="Rode name, area, colony"
-                    onChange={Formik.handleChange}
-                    onBlur={Formik.handleBlur}
-                    value={Formik.values.colony}
-                  ></input>
+                  <div className="input_container">
+                    <input
+                      type="text"
+                      name="colony"
+                      placeholder="Rode name, area, colony"
+                      onChange={Formik.handleChange}
+                      onBlur={Formik.handleBlur}
+                      value={Formik.values.colony}
+                    ></input>
+                    {Formik.errors.colony && Formik.touched.colony ? (
+                      <p className="address-error">{Formik.errors.colony}</p>
+                    ) : null}
+                  </div>
                 </div>
-                {Formik.errors.colony && Formik.touched.colony ? (
-                  <p className="address-error">{Formik.errors.colony}</p>
-                ) : null}
+                {/* <div className="address_container">
+                  <div className="location_btn_container">
+                    <button
+                      onClick={handleGetLocation}
+                      className="location_btn"
+                    >
+                      <i class="bx bx-current-location"></i>Use current location
+                    </button>
+                  </div>
+                </div> */}
+
+                {/* <div>
+                  {location && (
+                    <div>
+                      <p>Latitude: {location.latitude}</p>
+                      <p>Longitude: {location.longitude}</p>
+                    </div>
+                  )}
+
+                  {error && <p>{error}</p>}
+                </div> */}
 
                 <div className="term_condition">
                   <input
                     type="checkbox"
                     name="agree"
-                    checked={Formik.values.agree}
-                    onChange={Formik.handleChange}
+                    checked={isChecked}
+                    onChange={handleChecked}
                   ></input>
                   <label>Agree with all terms & conditions</label>
                 </div>
@@ -306,13 +358,18 @@ const PartnerSignup = () => {
                 <button type="submit" className="form_submit">
                   Submit
                 </button>
+                <NavLink to="/partnerlogin">
+                  <p className="login_path">Already have an account, Login </p>
+                </NavLink>
               </div>
             </div>
           </form>
         </div>
       )}
 
-      {addItem && <AddItem partnerId={partnerId} setPartnerId={setPartnerId} />}
+      {addItem && (
+        <PartnerDashboard partnerId={partnerId} setPartnerId={setPartnerId} />
+      )}
     </>
   );
 };
