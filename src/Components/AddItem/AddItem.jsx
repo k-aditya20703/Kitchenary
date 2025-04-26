@@ -40,8 +40,8 @@ const AddItem = (props) => {
   });
   return (
     <>
-      <div className="additem-section">
-        <div className="additem-form">
+      <div className="addItem_section">
+        <div className="additem_form">
           <form onSubmit={Formik.handleSubmit}>
             {/* <div className="photo-selector"> */}
             <div className="selector-input">
@@ -50,6 +50,7 @@ const AddItem = (props) => {
                 <input
                   type="file"
                   name="item_photo"
+                  required
                   onChange={(e) => {
                     Formik.setFieldValue(
                       "item_photo",
@@ -148,11 +149,10 @@ const AddItem = (props) => {
             </button>
           </form>
         </div>
-
-        <img className="chefleft" src="./Images/additem.jpg"></img>
-        <img className="chefup" src="./Images/chefup.jpg"></img>
+        <div className="additem_cover">
+          <img className="chefleft" src="./Images/additemcover.png"></img>
+        </div>
       </div>
-      <Footer />
     </>
   );
 };

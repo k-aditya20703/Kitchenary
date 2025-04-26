@@ -63,13 +63,18 @@
 .selector-input label {
   color: var(--bg-color);
   font-weight: 500;
+  font-size: small;
+  margin-left: 0.5rem;
 }
 .selector-input input {
   width: 100%;
-  border: 0.1rem solid var(--disable);
+  /* border: 0.1rem solid var(--disable); */
+  /* box-shadow: inset 2px 2px 4px #0000003d; */
+  box-shadow: 0px 0px 4px #00000057;
   border-radius: 0.3rem;
   padding: 0.5rem;
 }
+
 .item-input {
   display: block;
 }
@@ -77,21 +82,14 @@
 .item-input label {
   color: var(--bg-color);
   font-weight: 500;
+  font-size: small;
+  margin-left: 0.5rem;
 }
 
 .item-input input {
   width: 100%;
-  border: 0.1rem solid var(--disable);
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-}
-.ratting-input label {
-  color: var(--main-color);
-}
-
-.ratting-input input {
-  width: 100%;
-  border: 0.1rem solid var(--disable);
+  /* border: 0.1rem solid var(--disable);*/
+  box-shadow: 0px 0px 4px #00000057;
   border-radius: 0.3rem;
   padding: 0.5rem;
 }
@@ -99,11 +97,14 @@
 .time-input label {
   color: var(--bg-color);
   font-weight: 500;
+  font-size: small;
+  margin-left: 0.5rem;
 }
 
 .time-input input {
   width: 100%;
-  border: 0.1rem solid var(--disable);
+  /* border: 0.1rem solid var(--disable); */
+  box-shadow: 0px 0px 4px #00000057;
   border-radius: 0.3rem;
   padding: 0.5rem;
 }

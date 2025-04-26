@@ -1,0 +1,72 @@
+.dnd_section {
+  width: 60%;
+  padding: 1rem;
+  border: 0.1rem solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 10px #0000003d;
+  border-radius: 1rem;
+  background-color: #ffffff77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dnd_container {
+  text-align: center;
+  border: 0.1rem dashed #ef1d27;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.upload_file {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #272727;
+}
+
+.dnd_container i {
+  font-size: 3rem;
+  color: #ef1d27;
+}
+
+.drag_drop {
+  font-size: small;
+  font-weight: 500;
+  color: #00000093;
+}
+
+.dnd_container button {
+  background-color: #ef1d27;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.3rem 2rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uploadIcon {
+  font-size: 3rem;
+  color: #ef1d27;
+  background-color: #ffffff;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 1px 2px 5px #0000002f;
+}
+
+.buttonIcon {
+  font-size: 1.3rem;
+}

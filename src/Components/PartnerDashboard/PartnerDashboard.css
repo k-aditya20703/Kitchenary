@@ -1,0 +1,150 @@
+.partnerDashboard_section {
+  background-image: url(../../../public/Images/PartnerDashboardbg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+}
+
+.partnerDashboard_section .partner_login_nav {
+  background-color: white;
+}
+
+.partnerDashboard_section .partnerDashboard_details {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.partnerDashboard_details .partnerDashboard_menu {
+  width: 20%;
+  background-color: #ffffff77;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 81vh;
+  border: 0.1rem solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 10px #0000003d;
+}
+
+.partnerDashboard_menu .partnerDashboard_menu_option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #cfcfcf;
+  border: 0.1rem solid white;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: small;
+  color: white;
+  transition: 0.5s;
+}
+
+.partnerDashboard_menu .partnerDashboard_menu_option:focus {
+  background-color: #ef1d27;
+  border-color: #ffffff;
+}
+.partnerDashboard_menu .partnerDashboard_menu_option i {
+  font-size: 1.2rem;
+}
+
+.addItem_section {
+  width: 60%;
+  padding: 1rem;
+  border: 0.1rem solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 10px #0000003d;
+  border-radius: 1rem;
+  background-color: #ffffff77;
+  display: flex;
+  justify-content: space-between;
+}
+
+.additem_form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.additem_cover img {
+  width: 25rem;
+}
+
+.socialmedia_container {
+  display: flex;
+  gap: 0.3rem;
+  color: #888888;
+  /* justify-content: center; */
+  margin-top: 10rem;
+  font-size: x-large;
+}
+
+.track_section {
+  width: 20%;
+  padding: 1rem;
+  border: 0.1rem solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 10px #0000003d;
+  border-radius: 1rem;
+  background-color: #ffffff77;
+}
+
+.track_card_order {
+  width: 100%;
+  /* height: 6rem; */
+  background-image: url(../../../public/Images/cardui2.jpg);
+  background-size: 100%;
+  opacity: 70%;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.order_card_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cancle_card_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ratting_card_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.description {
+  font-size: x-small;
+  margin-top: 1rem;
+  color: #ffffffda;
+}
+.track_card_cancle {
+  width: 100%;
+  /* height: 6rem; */
+  background-image: url(../../../public/Images/cardui.jpg);
+  background-size: 100%;
+  opacity: 70%;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+.track_card_ratting {
+  width: 100%;
+  margin-top: 1rem;
+  background-image: url(../../../public/Images/cardui3.jpg);
+  background-size: 100%;
+  opacity: 70%;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.amount {
+  font-size: large;
+  font-weight: 600;
+}
