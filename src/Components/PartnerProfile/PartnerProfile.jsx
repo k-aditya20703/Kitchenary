@@ -64,6 +64,10 @@ const PartnerProfile = () => {
   const handleConfirmDelete = () => {
     setDeleteConformation(true);
   };
+
+  const handleCancelDelete = () => {
+    setDeleteConformation(false);
+  };
   return (
     <>
       <div className="partnerProfile_section">
@@ -463,7 +467,9 @@ const PartnerProfile = () => {
               </p>
 
               <div className="deleteaccount_action_btn">
-                <button className="delete_cancel">Cancel</button>
+                <button onClick={handleCancelDelete} className="delete_cancel">
+                  Cancel
+                </button>
                 <button
                   onClick={handleConfirmDelete}
                   className="delete_confirm"
