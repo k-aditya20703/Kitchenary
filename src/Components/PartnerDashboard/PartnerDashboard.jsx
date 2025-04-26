@@ -8,6 +8,7 @@ import AddItem from "../AddItem/AddItem";
 import { Circle } from "rc-progress";
 import DragandDrop from "../DragandDrop/DragandDrop";
 import PartnerLogout from "../PartnerLogout/PartnerLogout";
+import PartnerProfile from "../PartnerProfile/PartnerProfile";
 const initialValues = {
   item_name: "",
   prep_time: "",
@@ -17,9 +18,10 @@ const initialValues = {
   item_desc: "",
 };
 const PartnerDashboard = (props) => {
-  const [additem, setAdditem] = useState(true);
+  const [additem, setAdditem] = useState(false);
   const [ambiance, setAmbience] = useState(false);
   const [logout, setLogout] = useState(false);
+  const [partnerProfile, setPartnerProfile] = useState(true);
   const Formik = useFormik({
     initialValues: initialValues,
     validationSchema: AddItemSchema,
@@ -47,19 +49,29 @@ const PartnerDashboard = (props) => {
   const handleAdditem = () => {
     setAmbience(false);
     setLogout(false);
+    setPartnerProfile(false);
     setAdditem(true);
   };
 
   const handleAmbience = () => {
     setLogout(false);
     setAdditem(false);
+    setPartnerProfile(false);
     setAmbience(true);
   };
 
   const handleLogout = () => {
     setAmbience(false);
     setAdditem(false);
+    setPartnerProfile(false);
     setLogout(true);
+  };
+
+  const handleProfile = () => {
+    setAmbience(false);
+    setAdditem(false);
+    setLogout(false);
+    setPartnerProfile(true);
   };
   return (
     <>
@@ -86,6 +98,18 @@ const PartnerDashboard = (props) => {
            ========================================================  */}
           <div className="partnerDashboard_menu">
             <div
+              onClick={handleProfile}
+              tabIndex="0"
+              className="partnerDashboard_menu_option"
+              style={{
+                backgroundColor: partnerProfile ? "#ef1d27" : "#cfcfcf",
+              }}
+            >
+              <i class="bx bxs-user-circle"></i>
+              <p>Profile</p>
+            </div>
+
+            <div
               onClick={handleAdditem}
               tabIndex="0"
               className="partnerDashboard_menu_option"
@@ -94,10 +118,7 @@ const PartnerDashboard = (props) => {
               <i class="bx bxs-bowl-hot"></i>
               <p>Add Item</p>
             </div>
-            <div tabIndex="0" className="partnerDashboard_menu_option">
-              <i class="bx bxs-user-circle"></i>
-              <p>Profile</p>
-            </div>
+
             <div
               onClick={handleAmbience}
               tabIndex="0"
@@ -143,6 +164,7 @@ const PartnerDashboard = (props) => {
           {additem && <AddItem />}
           {ambiance && <DragandDrop />}
           {logout && <PartnerLogout />}
+          {partnerProfile && <PartnerProfile />}
 
           {/* ======================================================== 
            ======================TRACK  SECTION===================== 
