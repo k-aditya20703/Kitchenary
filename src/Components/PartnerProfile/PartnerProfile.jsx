@@ -7,8 +7,14 @@ const PartnerProfile = () => {
   const [profilePicture, setProfilepicture] = useState(null);
   const [itemMenu, setItemMenu] = useState(false);
   const [itemPannel, setItemPannel] = useState(false);
-  const [editPannel, setEditPanel] = useState(false);
+  const [editPannel, setEditPanel] = useState(true);
+  const [ambiencePannel, setAmbiencePannel] = useState(false);
+  const [menucard, setMenucard] = useState(false);
+  const [addMenu, setAddMenu] = useState(null);
+  const [deleteConformation, setDeleteConformation] = useState(false);
+  const [deleteAccount, setDeleteAccount] = useState(false);
   const inputRef = useRef();
+  const addMenuRef = useRef();
   const handleMenu = () => {
     setItemMenu(true);
   };
@@ -17,12 +23,46 @@ const PartnerProfile = () => {
   };
   const handleProfileEdit = () => {
     setItemPannel(false);
+    setAmbiencePannel(false);
+    setMenucard(false);
+    setDeleteAccount(false);
     setEditPanel(true);
   };
 
   const handleAllItem = () => {
     setEditPanel(false);
+    setAmbiencePannel(false);
+    setMenucard(false);
+    setDeleteAccount(false);
     setItemPannel(true);
+  };
+
+  const handleAmbience = () => {
+    setEditPanel(false);
+    setItemPannel(false);
+    setMenucard(false);
+    setDeleteAccount(false);
+    setAmbiencePannel(true);
+  };
+
+  const handleMenuCard = () => {
+    setEditPanel(false);
+    setItemPannel(false);
+    setAmbiencePannel(false);
+    setDeleteAccount(false);
+    setMenucard(true);
+  };
+
+  const handleDelete = () => {
+    setEditPanel(false);
+    setItemPannel(false);
+    setAmbiencePannel(false);
+    setMenucard(false);
+    setDeleteAccount(true);
+  };
+
+  const handleConfirmDelete = () => {
+    setDeleteConformation(true);
   };
   return (
     <>
@@ -78,9 +118,9 @@ const PartnerProfile = () => {
 
           <div className="partnerProfile_btn_section">
             <button onClick={handleAllItem}>View all items</button>
-            <button>View Ambiences</button>
-            <button>View Menues</button>
-            <button>Delete account</button>
+            <button onClick={handleAmbience}>View Ambiences</button>
+            <button onClick={handleMenuCard}>View Menues</button>
+            <button onClick={handleDelete}>Delete account</button>
           </div>
         </div>
 
@@ -339,12 +379,111 @@ const PartnerProfile = () => {
         )}
 
         {/* ===============================AMBIENCE SECTION===================================== */}
-        <div className="ambience_pannel">
-          <div className="ambience_photo_container">
-            <img src="./Images/resturant3.jpg"></img>
-            <button>Delete</button>
+        {ambiencePannel && (
+          <div className="ambience_pannel">
+            <div>
+              <div className="ambience_photo_container">
+                <img src="./Images/resturant3.jpg"></img>
+              </div>
+              <button>Delete</button>
+            </div>
+
+            <div>
+              <div className="ambience_photo_container">
+                <img src="./Images/resturant3.jpg"></img>
+              </div>
+              <button>Delete</button>
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* ===============================MENU CARD SECTION===================================== */}
+
+        {menucard && (
+          <div className="menucard_pannel">
+            <div className="menucard_container">
+              <div>
+                <div className="menucard">
+                  <img src="./Images/menucard1.jpeg"></img>
+                </div>
+
+                <button className="menu_delete">Delete</button>
+              </div>
+              <div>
+                <div className="menucard">
+                  <img src="./Images/menucard1.jpeg"></img>
+                </div>
+
+                <button className="menu_delete">Delete</button>
+              </div>
+              <div>
+                <div className="menucard">
+                  <img src="./Images/menucard1.jpeg"></img>
+                </div>
+
+                <button className="menu_delete">Delete</button>
+              </div>
+              <div>
+                <div className="menucard">
+                  <img src="./Images/menucard1.jpeg"></img>
+                </div>
+
+                <button className="menu_delete">Delete</button>
+              </div>
+
+              <div>
+                <input
+                  type="file"
+                  ref={addMenuRef}
+                  onChange={(event) => setAddMenu(event.target.files)}
+                  hidden
+                ></input>
+                <button
+                  className="add_menu"
+                  onClick={() => addMenuRef.current.click()}
+                >
+                  <i class="bx bx-folder-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ===============================DELETE PARTNER SECTION===================================== */}
+
+        {deleteAccount && (
+          <div className="delete_pannel">
+            <div className="delete_container">
+              <p className="delete_header">
+                Are you sure to delete your Account ?
+              </p>
+              <p className="delete_desc">
+                Deleting your account will remove all of your information form
+                our database .
+              </p>
+
+              <div className="deleteaccount_action_btn">
+                <button className="delete_cancel">Cancel</button>
+                <button
+                  onClick={handleConfirmDelete}
+                  className="delete_confirm"
+                >
+                  Delete
+                </button>
+              </div>
+
+              {deleteConformation && (
+                <div>
+                  <label>To confirm this enter your password</label>
+                  <div className="deleteaccount_input_section">
+                    <input type="password"></input>
+                    <button type="submit">Confirm</button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

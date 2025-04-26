@@ -385,13 +385,139 @@
   object-fit: cover;
 }
 
-.ambience_pannel .ambience_photo_container button {
+.ambience_pannel button {
   background-color: #ef1d27;
   color: white;
   width: 100%;
   padding: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   border-radius: 0.3rem;
+}
+
+.menucard_pannel {
+  width: 73%;
+}
+
+.menucard_container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.menucard {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.menucard img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.menucard_container .menu_delete {
+  width: 10rem;
+  background-color: #ef1d27;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.add_menu {
+  width: 10rem;
+  height: 10rem;
+  font-size: 4rem;
+  border-radius: 1rem;
+  color: #e2e2e2;
+  background-color: #adadad;
+  cursor: pointer;
+}
+
+.delete_pannel {
+  width: 73%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.delete_container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  border: 0.1rem solid #bbbbbb;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.delete_header {
+  font-weight: 600;
+}
+
+.delete_desc {
+  font-size: small;
+  font-weight: 400;
+  color: #444444;
+}
+
+.deleteaccount_action_btn {
+  display: flex;
+  justify-content: end;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.delete_cancel {
+  font-size: small;
+  padding: 0.2rem 1rem;
+  background-color: #cecece;
+  border-radius: 0.3rem;
+  color: #464646;
+  cursor: pointer;
+}
+
+.delete_confirm {
+  font-size: small;
+  padding: 0.2rem 1rem;
+  background-color: #ef1d27;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.deleteaccount_input_section {
+  display: flex;
+  /* align-items: center; */
+  gap: 0.5rem;
+}
+
+.delete_container label {
+  margin-top: 2rem;
+  font-size: small;
+}
+
+.deleteaccount_input_section input {
+  font-size: medium;
+  padding-left: 0.5rem;
+  font-size: small;
+  width: 71%;
+  border: 0.1rem solid #8f8f8f;
+  border-radius: 0.5rem;
+}
+
+.deleteaccount_input_section button {
+  font-size: small;
+  padding: 0.2rem 1rem;
+  background-color: #ef1d27;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  cursor: pointer;
 }
