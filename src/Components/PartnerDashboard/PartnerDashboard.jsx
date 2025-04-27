@@ -103,6 +103,7 @@ const PartnerDashboard = (props) => {
               className="partnerDashboard_menu_option"
               style={{
                 backgroundColor: partnerProfile ? "#ef1d27" : "#cfcfcf",
+                color: partnerProfile ? "#ffffff" : "#272727",
               }}
             >
               <i class="bx bxs-user-circle"></i>
@@ -113,7 +114,10 @@ const PartnerDashboard = (props) => {
               onClick={handleAdditem}
               tabIndex="0"
               className="partnerDashboard_menu_option"
-              style={{ backgroundColor: additem ? "#ef1d27" : "#cfcfcf" }}
+              style={{
+                backgroundColor: additem ? "#ef1d27" : "#cfcfcf",
+                color: additem ? "#ffffff" : "#272727",
+              }}
             >
               <i class="bx bxs-bowl-hot"></i>
               <p>Add Item</p>
@@ -123,7 +127,10 @@ const PartnerDashboard = (props) => {
               onClick={handleAmbience}
               tabIndex="0"
               className="partnerDashboard_menu_option"
-              style={{ backgroundColor: ambiance ? "#ef1d27" : "#cfcfcf" }}
+              style={{
+                backgroundColor: ambiance ? "#ef1d27" : "#cfcfcf",
+                color: ambiance ? "#ffffff" : "#272727",
+              }}
             >
               <i class="bx bxs-store-alt"></i>
               <p>Add ambience photo</p>
@@ -136,7 +143,10 @@ const PartnerDashboard = (props) => {
               onClick={handleLogout}
               tabIndex="0"
               className="partnerDashboard_menu_option"
-              style={{ backgroundColor: logout ? "#ef1d27" : "#cfcfcf" }}
+              style={{
+                backgroundColor: logout ? "#ef1d27" : "#cfcfcf",
+                color: logout ? "#ffffff" : "#272727",
+              }}
             >
               <i class="bx bx-log-out"></i>
               <p>Logout</p>
@@ -180,16 +190,16 @@ const PartnerDashboard = (props) => {
                 <div className="progress-indicator">
                   <Circle
                     percent={60}
-                    strokeColor="white"
-                    strokeWidth={10}
+                    strokeColor="#30bf56"
+                    strokeWidth={8}
                     trailColor="grey"
                     strokeLinecap="round"
-                    trailWidth={10}
+                    trailWidth={5}
                     gapDegree={80}
                     gapPosition="bottom"
                   />
                   <div className="progress-value">
-                    <p>60%</p>
+                    <p style={{ color: "#30bf56", fontWeight: "500" }}>60%</p>
                   </div>
                 </div>
               </div>
@@ -207,16 +217,16 @@ const PartnerDashboard = (props) => {
                 <div className="progress-indicator">
                   <Circle
                     percent={25}
-                    strokeColor="white"
-                    strokeWidth={10}
+                    strokeColor="#30bf56"
+                    strokeWidth={8}
                     trailColor="grey"
                     strokeLinecap="round"
-                    trailWidth={10}
+                    trailWidth={5}
                     gapDegree={80}
                     gapPosition="bottom"
                   />
                   <div className="progress-value">
-                    <p>25%</p>
+                    <p style={{ color: "#30bf56", fontWeight: "500" }}>25%</p>
                   </div>
                 </div>
               </div>
@@ -235,16 +245,16 @@ const PartnerDashboard = (props) => {
                 <div className="progress-indicator">
                   <Circle
                     percent={85}
-                    strokeColor="white"
-                    strokeWidth={10}
+                    strokeColor="#30bf56"
+                    strokeWidth={8}
                     trailColor="grey"
                     strokeLinecap="round"
-                    trailWidth={10}
+                    trailWidth={5}
                     gapDegree={80}
                     gapPosition="bottom"
                   />
                   <div className="progress-value">
-                    <p>85%</p>
+                    <p style={{ color: "#30bf56", fontWeight: "500" }}>85%</p>
                   </div>
                 </div>
               </div>

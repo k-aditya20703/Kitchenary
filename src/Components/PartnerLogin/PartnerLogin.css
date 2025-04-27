@@ -92,6 +92,19 @@
   font-weight: 500;
 }
 
+.goto_signup {
+  font-size: 0.7rem;
+  color: #272727be;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.goto_signup span {
+  color: #ef1d26;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 512px) {
   .partner_login_section .partner_login_container {
     width: 90%;

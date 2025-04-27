@@ -3,6 +3,8 @@ import "./Login.css";
 import { NavLink } from "react-router-dom";
 import { useFormik } from "formik";
 import { LoginSchema } from "../../Schemas";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 
 const initialValues = {
   email: "",
@@ -45,6 +47,7 @@ const Login = () => {
       <div className="user-login-section">
         <div className="login-container">
           <form onSubmit={Formik.handleSubmit}>
+            <h2>Login</h2>
             <div className="logininput-container">
               <label htmlFor="email">Email</label>
               <div className="email-feild">
@@ -101,10 +104,10 @@ const Login = () => {
             </p>
             <div className="signup-icon-section">
               <div className="icon-container">
-                <i className="bx bxl-google"></i>
+                <FcGoogle />
               </div>
               <div className="icon-container">
-                <i className="bx bxl-facebook"></i>
+                <FaFacebook style={{ color: "#1877F2" }} />
               </div>
             </div>
           </form>

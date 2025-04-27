@@ -121,10 +121,38 @@ const PartnerProfile = () => {
           </div>
 
           <div className="partnerProfile_btn_section">
-            <button onClick={handleAllItem}>View all items</button>
-            <button onClick={handleAmbience}>View Ambiences</button>
-            <button onClick={handleMenuCard}>View Menues</button>
-            <button onClick={handleDelete}>Delete account</button>
+            <button
+              style={{
+                color: itemPannel ? "red" : "#000000",
+              }}
+              onClick={handleAllItem}
+            >
+              View all items
+            </button>
+            <button
+              style={{
+                color: ambiencePannel ? "red" : "#000000",
+              }}
+              onClick={handleAmbience}
+            >
+              View Ambiences
+            </button>
+            <button
+              style={{
+                color: menucard ? "red" : "#000000",
+              }}
+              onClick={handleMenuCard}
+            >
+              View Menues
+            </button>
+            <button
+              style={{
+                color: deleteAccount ? "red" : "#000000",
+              }}
+              onClick={handleDelete}
+            >
+              Delete account
+            </button>
           </div>
         </div>
 
@@ -168,37 +196,37 @@ const PartnerProfile = () => {
               <div className="address_section">
                 <div style={{ width: "50%" }}>
                   <div className="address_info_input">
-                    <label>Country</label>
+                    <label>Country :</label>
                     <input type="text"></input>
                   </div>
                   <div className="address_info_input">
-                    <label>State</label>
+                    <label>State :</label>
                     <input type="text"></input>
                   </div>
                   <div className="address_info_input">
-                    <label>District</label>
+                    <label>District :</label>
                     <input type="text"></input>
                   </div>
                   <div className="address_info_input">
-                    <label>City</label>
+                    <label>City :</label>
                     <input type="text"></input>
                   </div>
                 </div>
                 <div style={{ width: "50%" }}>
                   <div className="address_info_input">
-                    <label>Pincode</label>
+                    <label>Pincode :</label>
                     <input type="number"></input>
                   </div>
                   <div className="address_info_input">
-                    <label>Colony</label>
+                    <label>Colony :</label>
                     <input type="text"></input>
                   </div>
                   <div className="address_info_input">
-                    <label>Building</label>
+                    <label>Building :</label>
                     <input type="text"></input>
                   </div>
                   <div className="address_info_input">
-                    <label>Landmark</label>
+                    <label>Landmark :</label>
                     <input type="text"></input>
                   </div>
                 </div>
@@ -209,21 +237,21 @@ const PartnerProfile = () => {
                 <div className="address_section">
                   <div style={{ width: "50%" }}>
                     <div className="address_info_input">
-                      <label>Facebook</label>
+                      <label>Facebook :</label>
                       <input type="text"></input>
                     </div>
                     <div className="address_info_input">
-                      <label>Instagram</label>
+                      <label>Instagram :</label>
                       <input type="text"></input>
                     </div>
                   </div>
                   <div style={{ width: "50%" }}>
                     <div className="address_info_input">
-                      <label>Twitter</label>
+                      <label>Twitter :</label>
                       <input type="number"></input>
                     </div>
                     <div className="address_info_input">
-                      <label>Linkedin</label>
+                      <label>Linkedin :</label>
                       <input type="text"></input>
                     </div>
                   </div>

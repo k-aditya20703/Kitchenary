@@ -180,7 +180,7 @@ const Signup = () => {
               <label>Agree with all terms & conditions</label>
             </div>
             <button type="submit">Submit</button>
-            <p>
+            <p style={{ marginBottom: "1rem" }}>
               allready have an account{" "}
               <NavLink to="/login">
                 <span>Login</span>

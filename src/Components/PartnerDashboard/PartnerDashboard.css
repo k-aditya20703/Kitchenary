@@ -37,7 +37,8 @@
   padding: 0.5rem;
   border-radius: 0.5rem;
   font-size: small;
-  color: white;
+  color: #272727;
+  font-weight: 500;
   transition: 0.5s;
 }
 
@@ -91,13 +92,14 @@
 
 .track_card_order {
   width: 100%;
-  /* height: 6rem; */
-  background-image: url(../../../public/Images/cardui2.jpg);
+  /* background-image: url(../../../public/Images/cardui2.jpg); */
   background-size: 100%;
-  opacity: 70%;
+  background-image: linear-gradient(white, #8bff8b1f, #9dff9d2c);
+  border: 0.1rem solid white;
+  box-shadow: 1px -1px 3px #0000002d;
   padding: 0.7rem;
   border-radius: 0.5rem;
-  color: white;
+  color: #222222;
   margin-bottom: 1rem;
 }
 .order_card_container {
@@ -121,27 +123,33 @@
 .description {
   font-size: x-small;
   margin-top: 1rem;
-  color: #ffffffda;
+  color: #222222;
 }
 .track_card_cancle {
   width: 100%;
   /* height: 6rem; */
-  background-image: url(../../../public/Images/cardui.jpg);
+  /* background-image: url(../../../public/Images/cardui.jpg); */
+  background-image: linear-gradient(white, #8bff8b1f, #9dff9d2c);
+  border: 0.1rem solid white;
+  box-shadow: 1px -1px 3px #0000002d;
   background-size: 100%;
-  opacity: 70%;
+  /* opacity: 70%; */
   padding: 0.7rem;
   border-radius: 0.5rem;
-  color: white;
+  color: #222222;
 }
 .track_card_ratting {
   width: 100%;
   margin-top: 1rem;
-  background-image: url(../../../public/Images/cardui3.jpg);
+  /* background-image: url(../../../public/Images/cardui3.jpg); */
+  background-image: linear-gradient(white, #8bff8b1f, #9dff9d2c);
+  border: 0.1rem solid white;
+  box-shadow: 1px -1px 3px #0000002d;
   background-size: 100%;
-  opacity: 70%;
+  /* opacity: 70%; */
   padding: 0.7rem;
   border-radius: 0.5rem;
-  color: white;
+  color: #222222;
 }
 
 .amount {

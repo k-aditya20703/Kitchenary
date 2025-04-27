@@ -5,18 +5,23 @@ import { NavLink } from "react-router-dom";
 const Dashboard = () => {
   return (
     <>
+      <div className="partner_login_nav">
+        <div className="foodnavbar-section">
+          <NavLink to="/">
+            <div className="logo-container">
+              <img src="./Images/KitchenaryLogo.png"></img>
+            </div>
+          </NavLink>
+
+          <NavLink to="/">
+            <div className="back-btn">
+              <i className="bx bx-left-arrow-alt"></i>
+            </div>
+          </NavLink>
+        </div>
+      </div>
       <div className="dashboard-section">
         <div className="dashboard-menu">
-          <div className="logo-container">
-            {/* <div className="back-icon">
-              <i class="bx bx-arrow-back"></i>
-            </div> */}
-            <img
-              style={{ width: "8rem" }}
-              src="/Images/kitchenaryLogo.png"
-            ></img>
-          </div>
-
           <div className="menu-option-container">
             <div className="menu-option active">
               <i class="bx bxs-dashboard"></i>

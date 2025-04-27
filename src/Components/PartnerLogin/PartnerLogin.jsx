@@ -84,6 +84,12 @@ const PartnerLogin = () => {
               <BsFacebook />
             </div>
           </div>
+          <p className="goto_signup">
+            Don't have any account,{" "}
+            <NavLink to="/partnerwithus">
+              <span>Sign up</span>
+            </NavLink>
+          </p>
         </div>
       </div>
     </>
