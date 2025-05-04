@@ -130,7 +130,7 @@ const Home = () => {
             </div>{" "}
           </NavLink>
 
-          <NavLink to="/instamart">
+          <NavLink to="/cart">
             <div className="option-card">
               <div className="card-about">
                 <h2>INSTAMART</h2>

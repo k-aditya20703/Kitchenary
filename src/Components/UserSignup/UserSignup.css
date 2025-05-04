@@ -1,0 +1,175 @@
+.usersignup_container {
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+}
+
+.usersignup_section {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 7px #0000002c;
+  position: relative;
+  overflow: hidden;
+}
+
+.goto_login {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ef1d26;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  left: -50%;
+}
+
+.goto_login_container {
+  padding: 1rem;
+}
+
+.goto_login_container img {
+  width: 20rem;
+  filter: drop-shadow(0px 10px 5px #0000008c);
+}
+
+.goto_login_container button {
+  width: 60%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid white;
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.goto_login_container button:hover {
+  background-color: white;
+  color: #ef1d26;
+}
+
+.usersignup_form {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.usersignup_form form {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.usersignup_form form h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usersignup_form form i {
+  color: #686868;
+}
+
+.usersignup_form form .userInput {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: transparent;
+}
+
+.usersignup_input {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6e6e6;
+  border: 0.1rem solid #e6e6e6;
+  border-radius: 0.5rem;
+  padding-right: 1rem;
+}
+.password_section {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.password_section a {
+  font-size: small;
+  color: grey;
+  transition: 0.5s;
+}
+
+.login_option {
+  text-align: center;
+  width: 100%;
+  font-size: small;
+  color: grey;
+  cursor: pointer;
+}
+
+.signup_options {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: large;
+}
+.password_section a:hover {
+  color: #ef1d26;
+}
+.termandcondition {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  accent-color: #ef1d26;
+}
+
+.rememberpassword {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: grey;
+  accent-color: #ef1d26;
+}
+.rememberpassword label {
+  font-size: small;
+  width: 100%;
+}
+
+.termandcondition label {
+  font-size: small;
+  width: 100%;
+}
+
+.usersignup_form form button {
+  background-color: #ef1d26;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 90%;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -239,7 +239,7 @@ const PartnerDashboard = (props) => {
             <div className="track_card_ratting">
               <div className="ratting_card_container">
                 <div>
-                  <h4>Restaurant ratting</h4>
+                  <h4>Rattings</h4>
                   <p className="amount">2378</p>
                 </div>
                 <div className="progress-indicator">

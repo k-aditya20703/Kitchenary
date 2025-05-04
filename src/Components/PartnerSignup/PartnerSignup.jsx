@@ -41,7 +41,7 @@ const PartnerSignup = () => {
     validationSchema: PartnerSignupSchema,
     onSubmit: async (values, action) => {
       console.log(values);
-      const API = `http://ec2-98-81-198-145.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?restaurantName=${Formik.values.name}&restaurantRegCode=${Formik.values.restaurantRegCode}&email=${Formik.values.email}&mobileNumber=${Formik.values.number}&password=${Formik.values.password}&partnerAddress.country=${Formik.values.region}&partnerAddress.state=${Formik.values.state}&partnerAddress.district=${Formik.values.district}&partnerAddress.city=${Formik.values.city}&partnerAddress.pincode=${Formik.values.pincode}&partnerAddress.landmark=${Formik.values.landmark}&partnerAddress.buildingName=${Formik.values.building}&partnerAddress.colonyName=${Formik.values.colony}`;
+      const API = `http://ec2-34-201-58-216.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?restaurantName=${Formik.values.name}&restaurantRegCode=${Formik.values.restaurantRegCode}&email=${Formik.values.email}&mobileNumber=${Formik.values.number}&password=${Formik.values.password}&partnerAddress.country=${Formik.values.region}&partnerAddress.state=${Formik.values.state}&partnerAddress.district=${Formik.values.district}&partnerAddress.city=${Formik.values.city}&partnerAddress.pincode=${Formik.values.pincode}&partnerAddress.landmark=${Formik.values.landmark}&partnerAddress.buildingName=${Formik.values.building}&partnerAddress.colonyName=${Formik.values.colony}`;
 
       const formData = new FormData();
       formData.append("file", values.restaurant_image);

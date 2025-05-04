@@ -17,7 +17,7 @@ const FoodDelivery = (props) => {
   const [showAllItem, setShowAllItem] = useState(false);
   const [showRestaurants, setShowRestaurants] = useState(true);
 
-  const API = `http://ec2-98-81-198-145.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?page=0&size=20`;
+  const API = `http://ec2-34-201-58-216.compute-1.amazonaws.com:9091/api/v1/kichenary/partners?page=0&size=20`;
 
   useEffect(() => {
     setLoader(true);

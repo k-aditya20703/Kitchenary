@@ -20,7 +20,7 @@ const AddItem = (props) => {
     validationSchema: AddItemSchema,
     onSubmit: async (values, action) => {
       console.log(values);
-      const API = `http://ec2-98-81-198-145.compute-1.amazonaws.com:9091/api/v1/kichenary/partner-items/${props?.partnerId}?itemName=${Formik.values.item_name}&itemDesc=${Formik.values.item_desc}&price=${Formik.values.item_price}&offer=${Formik.values.item_offer}&prepareTime=${Formik.values.prep_time}`;
+      const API = `http://ec2-34-201-58-216.compute-1.amazonaws.com:9091/api/v1/kichenary/partner-items/${props?.partnerId}?itemName=${Formik.values.item_name}&itemDesc=${Formik.values.item_desc}&price=${Formik.values.item_price}&offer=${Formik.values.item_offer}&prepareTime=${Formik.values.prep_time}`;
       const formData = new FormData();
       formData.append("file", values.item_photo);
 

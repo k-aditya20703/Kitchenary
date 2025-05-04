@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import "./PartnerProfile.css";
 import { FaRegEdit } from "react-icons/fa";
 import { BiColor } from "react-icons/bi";
+import ItemUpdate from "../ItemUpdate/ItemUpdate";
 
 const PartnerProfile = () => {
   const [profilePicture, setProfilepicture] = useState(null);
@@ -519,6 +520,7 @@ const PartnerProfile = () => {
           </div>
         )}
       </div>
+      {/* <ItemUpdate /> */}
     </>
   );
 };
